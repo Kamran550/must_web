@@ -15,29 +15,29 @@ const seoData: Record<
   { title: string; description: string; keywords: string[] }
 > = {
   en: {
-    title: "EIPU - European International Peace University | Study in Poland",
+    title: "MUST - Mazovia University of Science and Technology | Study in Poland",
     description:
-      "EIPU - European International Peace University. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
+      "MUST - Mazovia University of Science and Technology. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
     keywords: [
-      "EIPU",
-      "European International Peace University",
+      "MUST",
+      "Mazovia University of Science and Technology",
       "study in Poland",
       "international university",
       "Poland education",
       "bachelor degree Poland",
       "master degree Poland",
       "PhD Poland",
-      "European university",
+      "Mazovia university",
       "peace university",
     ],
   },
   ru: {
-    title: "EIPU - Европейский Международный Университет По миру и безопасности | Study in Poland",
+    title: "MUST - Мазовецкий университет науки и технологий | Study in Poland",
     description:
-      "EIPU - Европейский Международный Университет По миру и безопасности. Международный образовательный центр в Польше с программами бакалавриата, магистратуры и докторантуры. Качественное образование через мир и глобальное понимание.",
+      "MUST - Мазовецкий университет науки и технологий. Международный образовательный центр в Польше с программами бакалавриата, магистратуры и докторантуры. Качественное образование через мир и глобальное понимание.",
     keywords: [
-      "EIPU",
-      "Европейский Международный Университет По миру и безопасности",
+      "MUST",
+      "Мазовецкий университет науки и технологий",
       "Образование в Польше",
       "Обучение в Польше",
       "Международный университет",
@@ -49,12 +49,12 @@ const seoData: Record<
     ],
   },
   tr: {
-    title: "EIPU - European International Peace University | Study in Poland",
+    title: "MUST - Mazovia University of Science and Technology | Study in Poland",
     description:
-      "EIPU - European International Peace University. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
+      "MUST - Mazovia University of Science and Technology. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
     keywords: [
-      "EIPU",
-      "Avrupa Uluslararası Barış Üniversitesi",
+      "MUST",
+      "Mazovya Bilim ve Teknoloji Üniversitesi",
       "Polonya'da eğitim",
       "Polonya'da okumak",
       "uluslararası üniversite",
@@ -81,21 +81,21 @@ export async function generateMetadata({
     keywords: seo.keywords,
     icons: {
       icon: [
-        { url: "/images/EIPU-logo.png", sizes: "any", type: "image/png" },
-        { url: "/images/EIPU-logo.png", sizes: "32x32", type: "image/png" },
-        { url: "/images/EIPU-logo.png", sizes: "16x16", type: "image/png" },
+        { url: "/images/MUST-logo.png", sizes: "any", type: "image/png" },
+        { url: "/images/MUST-logo.png", sizes: "32x32", type: "image/png" },
+        { url: "/images/MUST-logo.png", sizes: "16x16", type: "image/png" },
       ],
       apple: [
-        { url: "/images/EIPU-logo.png", sizes: "180x180", type: "image/png" },
+        { url: "/images/MUST-logo.png", sizes: "180x180", type: "image/png" },
       ],
-      shortcut: "/images/EIPU-logo.png",
+      shortcut: "/images/MUST-logo.png",
     },
     alternates: {
-      canonical: `https://eipu.edu.pl/${locale}`,
+      canonical: `https://must.edu.pl/${locale}`,
       languages: {
-        en: "https://eipu.edu.pl/en",
-        ru: "https://eipu.edu.pl/ru",
-        tr: "https://eipu.edu.pl/tr",
+        en: "https://must.edu.pl/en",
+        ru: "https://must.edu.pl/ru",
+        tr: "https://must.edu.pl/tr",
       },
     },
     openGraph: {

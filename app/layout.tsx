@@ -15,24 +15,24 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   // Əsas məlumatlar
   title: {
-    default: "EIPU - European International Peace University | Study in Poland",
-    template: "%s | EIPU - European International Peace University",
+    default: "MUST - Mazovia University of Science and Technology | Study in Poland",
+    template: "%s | MUST - Mazovia University of Science and Technology",
   },
   description:
-    "EIPU - European International Peace University. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
+    "MUST - Mazovia University of Science and Technology. International education in Poland with bachelor's, master's and PhD programs. Quality education through science and technology.",
 
   // Açar sözlər
   keywords: [
-    "EIPU",
-    "eipu",
-    "European International Peace University",
-    "eipu.edu.pl",
+    "MUST",
+    "Mazovia University of Science and Technology",
+    "MUST",
+    "must.edu.pl",
     "Poland university",
     "Polish university",
     "international university Poland",
     "international university",
-    "peace university",
-    "European university",
+    "science and technology university",
+    "Mazovia university",
     "study in Poland",
     "education in Poland",
     "PhD Poland",
@@ -47,12 +47,12 @@ export const metadata: Metadata = {
   // Müəllif və yaradıcı
   authors: [
     {
-      name: "European International Peace University",
-      url: "https://eipu.edu.pl",
+      name: "Mazovia University of Science and Technology",
+      url: "https://must.edu.pl",
     },
   ],
-  creator: "EIPU - European International Peace University",
-  publisher: "European International Peace University",
+  creator: "MUST - Mazovia University of Science and Technology",
+  publisher: "Mazovia University of Science and Technology",
 
   // Robots
   robots: {
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   },
 
   // Canonical URL
-  metadataBase: new URL("https://eipu.edu.pl"),
+  metadataBase: new URL("https://must.edu.pl"),
   alternates: {
     canonical: "/",
     languages: {
@@ -83,17 +83,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     alternateLocale: ["ru_RU", "tr_TR"],
-    url: "https://eipu.edu.pl",
-    siteName: "EIPU - European International Peace University",
-    title: "EIPU - European International Peace University | Study in Poland",
+    url: "https://must.edu.pl",
+    siteName: "MUST - Mazovia University of Science and Technology",
+    title: "MUST - Mazovia University of Science and Technology | Study in Poland",
     description:
-      "EIPU - European International Peace University. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
+      "MUST - Mazovia University of Science and Technology. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
     images: [
       {
-        url: "/images/EIPU-logo-tam.jpg",
+        url: "/images/MUST-logo-tam.png",
         width: 1200,
         height: 630,
-        alt: "EIPU - European International Peace University Logo",
+        alt: "MUST - Mazovia University of Science and Technology Logo",
       },
     ],
   },
@@ -101,12 +101,12 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "EIPU - European International Peace University",
+    title: "MUST - Mazovia University of Science and Technology",
     description:
-      "EIPU - European International Peace University. International education in Poland with bachelor's, master's and PhD programs.",
-    images: ["/images/EIPU-logo-tam.jpg"],
-    creator: "@eipu_edu",
-    site: "@eipu_edu",
+      "MUST - Mazovia University of Science and Technology. International education in Poland with bachelor's, master's and PhD programs.",
+    images: ["/images/MUST-logo-tam.png"],
+    creator: "@must_edu",
+    site: "@must_edu",
   },
 
   // Verification (Google Search Console, Bing, etc.)
@@ -122,14 +122,14 @@ export const metadata: Metadata = {
   // Icons / Favicon
   icons: {
     icon: [
-      { url: "/images/EIPU-logo.png", sizes: "any", type: "image/png" },
-      { url: "/images/EIPU-logo.png", sizes: "32x32", type: "image/png" },
-      { url: "/images/EIPU-logo.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/MUST-logo.png", sizes: "any", type: "image/png" },
+      { url: "/images/MUST-logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/MUST-logo.png", sizes: "16x16", type: "image/png" },
     ],
     apple: [
-      { url: "/images/EIPU-logo.png", sizes: "180x180", type: "image/png" },
+      { url: "/images/MUST-logo.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/images/EIPU-logo.png",
+    shortcut: "/images/MUST-logo.png",
   },
 };
 

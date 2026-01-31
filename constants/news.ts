@@ -30,14 +30,14 @@ export const newsCategories = [
 export const news: NewsItem[] = [
   {
     id: "1",
-    title: "EIPU Welcomes New International Students",
-    slug: "eipu-welcomes-new-international-students",
+    title: "MUST Welcomes New International Students",
+    slug: "must-welcomes-new-international-students",
     category: "university",
     date: "2024-12-15",
     excerpt:
-      "European International Peace University proudly welcomes over 150 new international students from 30 different countries this academic year.",
+      "Mazovia University of Science and Technology proudly welcomes over 150 new international students from 30 different countries this academic year.",
     content: `
-      <p>European International Peace University (EIPU) is thrilled to announce the arrival of over 150 new international students from 30 different countries, marking one of the most diverse cohorts in our university's history.</p>
+      <p>Mazovia University of Science and Technology (MUST) is thrilled to announce the arrival of over 150 new international students from 30 different countries, marking one of the most diverse cohorts in our university's history.</p>
       
       <h2>A Global Community</h2>
       <p>This year's international students represent a wide range of cultures, bringing unique perspectives and experiences to our campus community. The incoming students come from countries across Europe, Asia, Africa, and the Americas, further enriching our global educational environment.</p>
@@ -51,13 +51,13 @@ export const news: NewsItem[] = [
         <li>International student support services</li>
       </ul>
       
-      <p>We're excited to see the contributions these new students will make to our university community and wish them success in their academic journey at EIPU.</p>
+      <p>We're excited to see the contributions these new students will make to our university community and wish them success in their academic journey at MUST.</p>
     `,
     author: "Admissions Office",
     featured: true,
     readTime: 3,
     tags: ["International Students", "Admissions", "University"],
-    image: "/images/about-campus.jpg",
+    image: "/images/about-campus.png",
   },
   {
     id: "2",
@@ -80,7 +80,7 @@ export const news: NewsItem[] = [
     featured: true,
     readTime: 5,
     tags: ["Conference", "Peace Education", "Events"],
-    image: "/images/about-campus.jpg",
+    image: "/images/about-campus.png",
   },
   {
     id: "3",
@@ -89,7 +89,7 @@ export const news: NewsItem[] = [
     category: "academic",
     date: "2024-12-05",
     excerpt:
-      "EIPU celebrates the opening of a state-of-the-art research laboratory dedicated to peace studies and international relations.",
+      "MUST celebrates the opening of a state-of-the-art research laboratory dedicated to peace studies and international relations.",
     content: `
       <p>Today marks a significant milestone as we officially open our new research laboratory, equipped with cutting-edge technology for peace studies and international relations research.</p>
       
@@ -99,7 +99,7 @@ export const news: NewsItem[] = [
     featured: false,
     readTime: 4,
     tags: ["Research", "Academic", "Facilities"],
-    image: "/images/about-campus.jpg",
+    image: "/images/about-campus.png",
   },
   {
     id: "4",
@@ -139,14 +139,14 @@ export const news: NewsItem[] = [
   },
   {
     id: "6",
-    title: "International Partnership with European Universities",
-    slug: "international-partnership-european-universities",
+    title: "International Partnership with Mazovia Universities",
+    slug: "international-partnership-mazovia-universities",
     category: "university",
     date: "2024-11-25",
     excerpt:
-      "EIPU signs partnership agreements with leading European universities to enhance student exchange programs.",
+      "MUST signs partnership agreements with leading Mazovia universities to enhance student exchange programs.",
     content: `
-      <p>We're excited to announce new partnership agreements with several leading European universities, expanding our student exchange program opportunities.</p>
+      <p>We're excited to announce new partnership agreements with several leading Mazovia universities, expanding our student exchange program opportunities.</p>
       
       <p>These partnerships will enable students to study abroad and gain international experience while earning credits towards their degrees.</p>
     `,
@@ -162,7 +162,7 @@ export const news: NewsItem[] = [
     category: "academic",
     date: "2024-11-20",
     excerpt:
-      "EIPU launches a new online learning platform providing enhanced digital learning experiences for students.",
+      "MUST launches a new online learning platform providing enhanced digital learning experiences for students.",
     content: `
       <p>We're proud to announce the launch of our new online learning platform, designed to provide an enhanced digital learning experience for all students.</p>
       
@@ -190,16 +190,16 @@ export const news: NewsItem[] = [
     featured: false,
     readTime: 4,
     tags: ["Graduation", "Events", "Celebration"],
-    image: "/images/about-campus.jpg",
+    image: "/images/about-campus.png",
   },
   {
     id: "9",
-    title: "Sustainability Initiatives at EIPU",
-    slug: "sustainability-initiatives-at-eipu",
+    title: "Sustainability Initiatives at MUST",
+    slug: "sustainability-initiatives-at-must",
     category: "university",
     date: "2024-11-10",
     excerpt:
-      "EIPU announces new sustainability initiatives as part of our commitment to environmental responsibility.",
+      "MUST announces new sustainability initiatives as part of our commitment to environmental responsibility.",
     content: `
       <p>As part of our commitment to environmental responsibility, we're launching several new sustainability initiatives on campus.</p>
       
@@ -230,14 +230,14 @@ export const news: NewsItem[] = [
   },
   {
     id: "11",
-    title: "New Faculty Members Join EIPU",
-    slug: "new-faculty-members-join-eipu",
+    title: "New Faculty Members Join MUST",
+    slug: "new-faculty-members-join-must",
     category: "academic",
     date: "2024-10-30",
     excerpt:
       "We welcome distinguished faculty members who bring expertise and innovation to our academic programs.",
     content: `
-      <p>We're pleased to welcome several distinguished faculty members to EIPU, bringing valuable expertise and fresh perspectives to our academic programs.</p>
+      <p>We're pleased to welcome several distinguished faculty members to MUST, bringing valuable expertise and fresh perspectives to our academic programs.</p>
       
       <p>These new faculty members will strengthen our commitment to academic excellence and innovative teaching.</p>
     `,

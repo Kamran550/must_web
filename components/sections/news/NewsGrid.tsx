@@ -65,8 +65,16 @@ export default function NewsGrid() {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-slate-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 md:py-32 relative">
+      {/* Subtle background pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.02] dark:opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23722F37' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+        aria-hidden
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Featured Section */}
         {featuredNews.length > 0 &&
           selectedCategory === "all" &&
@@ -78,11 +86,15 @@ export default function NewsGrid() {
               viewport={{ once: true, margin: "-100px" }}
               className="mb-16"
             >
-              <div className="flex items-center gap-2 mb-6">
-                <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                <h2 className="text-2xl md:text-3xl font-bold">
+              <div className="mb-8">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#722F37]/10 border border-[#722F37]/20 mb-4">
+                  <Star className="w-4 h-4 text-[#d4af37] fill-[#d4af37]" />
+                  <span className="text-sm font-medium text-[#722F37]">Featured</span>
+                </div>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
                   {t("featuredNews")}
                 </h2>
+                <div className="w-16 h-1 bg-[#722F37] rounded-full mt-3" />
               </div>
               <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
                 {featuredNews.map((item, index) => (
@@ -100,8 +112,11 @@ export default function NewsGrid() {
           viewport={{ once: true, margin: "-100px" }}
           className="mb-12"
         >
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold">{t("allNews")}</h2>
+          <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between mb-8">
+            <div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3">{t("allNews")}</h2>
+              <div className="w-16 h-1 bg-[#722F37] rounded-full" />
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
               {/* Search */}
               <div className="relative w-full md:w-64">
@@ -127,8 +142,8 @@ export default function NewsGrid() {
                     onClick={() => setSelectedCategory(category.id)}
                     className={
                       selectedCategory === category.id
-                        ? "bg-primary hover:bg-primary/90 text-white"
-                        : ""
+                        ? "bg-[#722F37] hover:bg-[#5a252c] text-white border-[#722F37]"
+                        : "border-gray-300 dark:border-slate-700 hover:border-[#722F37] hover:bg-[#722F37]/5"
                     }
                   >
                     {tCategories(category.id)}
@@ -202,7 +217,7 @@ function FeaturedNewsCard({ item, index }: { item: NewsItem; index: number }) {
       className="group"
     >
       <Link href={`/news/${item.slug}`}>
-        <Card className="h-full shadow-lg hover:shadow-xl transition-all border-2 border-primary/50 overflow-hidden cursor-pointer group-hover:border-primary">
+        <Card className="h-full shadow-lg hover:shadow-2xl transition-all border-2 border-[#722F37]/30 overflow-hidden cursor-pointer group-hover:border-[#722F37] bg-white dark:bg-slate-900">
           {item.image && (
             <div className="relative w-full h-48 md:h-64 overflow-hidden">
               <Image
@@ -212,7 +227,7 @@ function FeaturedNewsCard({ item, index }: { item: NewsItem; index: number }) {
                 className="object-cover group-hover:scale-110 transition-transform duration-300"
               />
               <div className="absolute top-4 left-4">
-                <span className="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
+                <span className="bg-[#722F37] text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
                   <Star className="w-3 h-3 fill-white" />
                   {t("featured")}
                 </span>
@@ -221,7 +236,7 @@ function FeaturedNewsCard({ item, index }: { item: NewsItem; index: number }) {
           )}
           <CardHeader>
             <div className="flex items-center gap-4 text-xs text-muted-foreground mb-2">
-              <span className="uppercase font-semibold px-2 py-1 bg-primary/10 text-primary rounded">
+              <span className="uppercase font-semibold px-2 py-1 bg-[#722F37]/10 text-[#722F37] rounded">
                 {item.category}
               </span>
               <div className="flex items-center gap-1">
@@ -239,7 +254,7 @@ function FeaturedNewsCard({ item, index }: { item: NewsItem; index: number }) {
                 </div>
               )}
             </div>
-            <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors line-clamp-2">
+            <h3 className="text-xl md:text-2xl font-bold group-hover:text-[#722F37] transition-colors line-clamp-2">
               {item.title}
             </h3>
           </CardHeader>
@@ -279,7 +294,7 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
       className="group"
     >
       <Link href={`/news/${item.slug}`}>
-        <Card className="h-full flex flex-col shadow-lg hover:shadow-xl transition-all overflow-hidden cursor-pointer group-hover:border-primary">
+        <Card className="h-full flex flex-col shadow-lg hover:shadow-xl transition-all overflow-hidden cursor-pointer border-2 border-gray-200 dark:border-slate-700 group-hover:border-[#722F37] bg-white dark:bg-slate-900">
           {item.image && (
             <div className="relative w-full h-48 overflow-hidden">
               <Image
@@ -290,7 +305,7 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
               />
               {item.featured && (
                 <div className="absolute top-3 left-3">
-                  <span className="bg-primary text-white text-xs font-semibold px-2 py-1 rounded-full">
+                  <span className="bg-[#722F37] text-white text-xs font-semibold px-2 py-1 rounded-full shadow-lg">
                     {t("featured")}
                   </span>
                 </div>
@@ -299,7 +314,7 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
           )}
           <CardHeader className="flex-1">
             <div className="flex items-center gap-3 text-xs text-muted-foreground mb-2">
-              <span className="uppercase font-semibold px-2 py-1 bg-primary/10 text-primary rounded">
+              <span className="uppercase font-semibold px-2 py-1 bg-[#722F37]/10 text-[#722F37] rounded">
                 {item.category}
               </span>
               <div className="flex items-center gap-1">
@@ -310,7 +325,7 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
                 })}
               </div>
             </div>
-            <h3 className="text-lg md:text-xl font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+            <h3 className="text-lg md:text-xl font-bold mb-2 group-hover:text-[#722F37] transition-colors line-clamp-2">
               {item.title}
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3">
@@ -400,8 +415,8 @@ function Pagination({
               onClick={() => onPageChange(page as number)}
               className={
                 currentPage === page
-                  ? "bg-primary hover:bg-primary/90 text-white"
-                  : ""
+                  ? "bg-[#722F37] hover:bg-[#5a252c] text-white border-[#722F37]"
+                  : "border-gray-300 dark:border-slate-700 hover:border-[#722F37]"
               }
             >
               {page}

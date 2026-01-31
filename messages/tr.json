@@ -30,19 +30,19 @@
     "apply": "Başvur"
   },
   "hero": {
-    "title": "Dünya Standartlarında Eğitimle Geleceğinizi Şekillendirin",
-    "subtitle": "Küresel öğrenci topluluğuna katılın ve yarının lideri olmak için gerekli becerileri kazanın. 2026 Bahar Dönemi başvuruları şimdi açık.",
+    "title": "MUST'ta Bilim, Teknoloji ve İnovasyon",
+    "subtitle": "Varşova'daki Mazovya Bilim ve Teknoloji Üniversitesi'ne katılın. Araştırma ve mükemmellik temelli programlarla geleceğinizi inşa edin. 2026 Bahar Dönemi başvuruları açık.",
     "primaryButton": "Şimdi Başvur",
     "secondaryButton": "Programları Keşfet"
   },
   "aboutPreview": {
-    "title": "Hakkımızda",
-    "description": "Avrupa Uluslararası Barış Üniversitesi (EIPU), eğitim ve küresel anlayış yoluyla barışı teşvik etmeye adanmış yenilikçi bir yüksek öğretim kurumudur. Öğrencilerimize dünyada olumlu değişiklikler yaratmak için gerekli bilgi ve becerileri sağlıyoruz.",
+    "title": "MUST Hakkında",
+    "description": "Mazovya Bilim ve Teknoloji Üniversitesi (MUST), 2020'de Varşova'da kurulmuş olup bilim, teknoloji ve inovasyona odaklanan dinamik bir kurumdur. Mezunları yarının zorluklarına hazırlamak için titiz akademik programları pratik araştırmalarla birleştiriyoruz.",
     "button": "Daha Fazla Bilgi"
   },
   "statistics": {
-    "title": "Rakamlarla Etkimiz",
-    "subtitle": "Kaliteli eğitim ve küresel ortaklıklar yoluyla mükemmellik inşa ediyoruz",
+    "title": "MUST Rakamlarla",
+    "subtitle": "2020'den bu yana bilim ve teknoloji eğitiminde mükemmellik",
     "students": "Öğrenci",
     "countries": "Ülke",
     "programs": "Program",
@@ -59,8 +59,8 @@
     "subtitle": "Mezunlarımızdan başarı hikayeleri"
   },
   "cta": {
-    "title": "Geleceğinize Yatırım Yapın",
-    "description": "Küresel liderlerin yetiştiği üniversiteye katılın. Başvuru süreci basit ve hızlıdır.",
+    "title": "MUST'ta Yolculuğunuza Başlayın",
+    "description": "Mazovya Bilim ve Teknoloji Üniversitesi'ne başvurun. Sadeleştirilmiş başvuru sürecimiz akademik kariyerinizde bir sonraki adımı atmanızı kolaylaştırır.",
     "button": "Şimdi Başvur",
     "learnMore": "Daha Fazla Bilgi"
   },
@@ -71,7 +71,7 @@
   },
   "about": {
     "hero": {
-      "title": "Avrupa Uluslararası Barış Üniversitesi Hakkında",
+      "title": "Mazovya Bilim ve Teknoloji Üniversitesi Hakkında",
       "subtitle": "Eğitim ve küresel işbirliği yoluyla zihinleri güçlendirmek, barış inşa etmek ve yarının liderlerini şekillendirmek."
     },
     "missionVision": {
@@ -98,7 +98,7 @@
     },
     "values": {
       "title": "Değerlerimiz",
-      "subtitle": "EIPU'da yaptığımız her şeyi yönlendiren ilkeler",
+      "subtitle": "MUST'da yaptığımız her şeyi yönlendiren ilkeler",
       "items": {
         "academicExcellence": {
           "title": "Akademik Mükemmellik",
@@ -132,7 +132,7 @@
       "milestones": {
         "2020": {
           "title": "Kuruluş",
-          "description": "Avrupa Uluslararası Barış Üniversitesi, barış eğitimi ve küresel vatandaşlığa adanmış dünya standartlarında bir kurum yaratma vizyonuyla kuruldu."
+          "description": "Mazovya Bilim ve Teknoloji Üniversitesi, barış eğitimi ve küresel vatandaşlığa adanmış dünya standartlarında bir kurum yaratma vizyonuyla kuruldu."
         },
         "2021": {
           "title": "İlk Mezunlar",
@@ -140,7 +140,7 @@
         },
         "2022": {
           "title": "Uluslararası Tanınma",
-          "description": "EIPU akreditasyon aldı ve dünya çapında önde gelen üniversitelerle ortaklıklar kurarak küresel erişimimizi genişletti."
+          "description": "MUST akreditasyon aldı ve dünya çapında önde gelen üniversitelerle ortaklıklar kurarak küresel erişimimizi genişletti."
         },
         "2023": {
           "title": "Genişleme",
@@ -155,11 +155,11 @@
         "fullName": "Ad Soyad",
         "position": "Pozisyon",
         "fullNameValue": "Prof. Dr. Serdar KORAL",
-        "positionValue": "Avrupa Uluslararası Barış Üniversitesi (EIPU) Rektörü",
-        "description": "Prof. Dr. Serdar KORAL, uluslararası saygın bir akademisyen, yüksek öğretim lideri ve barış odaklı öğrenme savunucusudur. Kıtalar arası yirmi yılı aşkın bir kariyere sahip olan KORAL, Avrupa Uluslararası Barış Üniversitesi'ne (EIPU) akademik mükemmellik, küresel vizyon ve sosyal sorumluluk sahibi liderlerin bir sonraki neslini şekillendirme konusunda derin bir bağlılık getirmektedir.",
+        "positionValue": "Mazovya Bilim ve Teknoloji Üniversitesi (MUST) Rektörü",
+        "description": "Prof. Dr. Serdar KORAL, uluslararası saygın bir akademisyen, yüksek öğretim lideri ve barış odaklı öğrenme savunucusudur. Kıtalar arası yirmi yılı aşkın bir kariyere sahip olan KORAL, Mazovya Bilim ve Teknoloji Üniversitesi'ne (MUST) akademik mükemmellik, küresel vizyon ve sosyal sorumluluk sahibi liderlerin bir sonraki neslini şekillendirme konusunda derin bir bağlılık getirmektedir.",
         "qualifications": "Dr. KORAL, barış ve çatışma çalışmaları, küresel diplomasi ve kültürlerarası iletişim alanlarında uzmanlaşmış Siyaset Bilimi ve Uluslararası İlişkiler alanında doktora derecesine sahiptir. Avrupa, Orta Asya ve Orta Doğu'daki tanınmış kurumlarda akademik ve idari pozisyonlar almıştır. Akademik yolculuğu, yüksek öğretimde diyalog, eleştirel düşünme ve etik liderliği teşvik etmeye odaklanmıştır.",
         "email": "E-posta",
-        "emailValue": "serdar.koral@eipu.edu.pl"
+        "emailValue": "serdar.koral@must.edu.pl"
       },
       "welcomeMessage": {
         "title": "Rektörden Hoş Geldiniz Mesajı",
@@ -183,22 +183,22 @@
       "viceRector": {
         "position": "Rektör Yardımcısı",
         "name": "Marlene Treiblach",
-        "email": "marlene.treiblach@eipu.edu.pl"
+        "email": "marlene.treiblach@must.edu.pl"
       },
       "rectorAdvisor": {
         "position": "Rektör Danışmanı",
         "name": "Milena Zaworska",
-        "email": "milena.zaworska@eipu.edu.pl"
+        "email": "milena.zaworska@must.edu.pl"
       },
       "secretaryGeneral": {
         "position": "Genel Sekreter",
         "name": "Martin Dravoski",
-        "email": "martin.dravoski@eipu.edu.pl"
+        "email": "martin.dravoski@must.edu.pl"
       },
       "officeDirector": {
         "position": "Ofis Yöneticisi",
         "name": "Elvir Droslan",
-        "email": "elvir.droslan@eipu.edu.pl"
+        "email": "elvir.droslan@must.edu.pl"
       }
     }
   },
@@ -470,7 +470,7 @@
   "news": {
     "hero": {
       "title": "Haberler ve Güncellemeler",
-      "subtitle": "Avrupa Uluslararası Barış Üniversitesi'ndeki en son haberler, etkinlikler, duyurular ve başarılar hakkında bilgi sahibi olun."
+      "subtitle": "Mazovya Bilim ve Teknoloji Üniversitesi'ndeki en son haberler, etkinlikler, duyurular ve başarılar hakkında bilgi sahibi olun."
     },
     "grid": {
       "featuredNews": "Öne Çıkan Haberler",
@@ -497,7 +497,7 @@
     },
     "newsletter": {
       "title": "Güncel Kalın",
-      "description": "Bültenimize abone olun ve EIPU'dan önemli haberleri, etkinlikleri ve güncellemeleri kaçırmayın.",
+      "description": "Bültenimize abone olun ve MUST'dan önemli haberleri, etkinlikleri ve güncellemeleri kaçırmayın.",
       "emailPlaceholder": "E-posta adresinizi girin",
       "subscribe": "Abone Ol",
       "thankYou": "Abone olduğunuz için teşekkürler!",
@@ -573,7 +573,7 @@
     }
   },
   "footer": {
-    "description": "Avrupa Uluslararası Barış Üniversitesi - Eğitim, barış ve kültürü birleştiren uluslararası bir üniversite.",
+    "description": "Mazovya Bilim ve Teknoloji Üniversitesi (MUST) - Varşova'da akademik mükemmellik, inovasyon ve küresel perspektifleri birleştiren modern bir üniversite.",
     "quickLinks": "Hızlı Bağlantılar",
     "contact": "İletişim",
     "university": "Üniversite",
@@ -600,14 +600,21 @@
       "studentLife": "Öğrenci Yaşamı",
       "admissions": "Kabul"
     },
-    "copyright": "© {year} Avrupa Uluslararası Barış Üniversitesi. Tüm hakları saklıdır.",
+    "copyright": "© {year} Mazovya Bilim ve Teknoloji Üniversitesi. Tüm hakları saklıdır.",
     "privacyPolicy": "Gizlilik Politikası",
     "termsOfService": "Hizmet Şartları"
   },
   "apply": {
     "hero": {
-      "title": "EIPU'ya Başvurun",
-      "subtitle": "Akademik yolculuğunuza bizimle başlayın. Derece programınızı seçin ve başvurunuzu bugün başlatın."
+      "title": "MUST'ya Başvurun",
+      "subtitle": "Akademik yolculuğunuza bizimle başlayın. Derece programınızı seçin ve başvurunuzu bugün başlatın.",
+      "badge": "Çevrimiçi Başvuru",
+      "steps": {
+        "step1": { "title": "Tür Seçin", "desc": "Öğrenci, Ajans veya Transfer" },
+        "step2": { "title": "Program Seçin", "desc": "Derece ve fakülte" },
+        "step3": { "title": "Başvuruyu Doldurun", "desc": "Formu tamamlayın" },
+        "step4": { "title": "Gönder", "desc": "Başvurunuzu değerlendireceğiz" }
+      }
     },
     "applicantType": {
       "title": "Başvuru türüm",

@@ -200,20 +200,20 @@ export default function ApplyForm() {
   return (
     <div className="max-w-6xl mx-auto">
       {/* Step Indicator */}
-      <div className="flex items-center justify-center mb-8">
-        <div className="flex items-center space-x-4">
+      <div className="flex items-center justify-center mb-12">
+        <div className="flex items-center gap-2 sm:gap-4">
           {(["type", "degree", "faculty", "form"] as Step[]).map(
             (step, index) => (
               <div key={step} className="flex items-center">
                 <button
                   onClick={() => handleStepClick(step)}
                   disabled={!isStepAccessible(step)}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-all ${
+                  className={`w-12 h-12 rounded-xl flex items-center justify-center font-bold text-sm transition-all ${
                     currentStep === step
-                      ? "bg-primary text-primary-foreground"
+                      ? "bg-[#722F37] text-white shadow-lg ring-2 ring-[#722F37]/30"
                       : getStepIndex(currentStep) > index
-                      ? "bg-green-500 text-white hover:bg-green-600 cursor-pointer"
-                      : "bg-gray-200 text-gray-500"
+                      ? "bg-[#d4af37]/30 text-[#722F37] border-2 border-[#d4af37] hover:bg-[#d4af37]/40 cursor-pointer"
+                      : "bg-gray-100 dark:bg-slate-800 text-gray-400 dark:text-gray-500 border-2 border-gray-200 dark:border-slate-700"
                   } ${
                     isStepAccessible(step) && currentStep !== step
                       ? "hover:scale-110 cursor-pointer"
@@ -226,10 +226,10 @@ export default function ApplyForm() {
                 </button>
                 {index < 3 && (
                   <div
-                    className={`w-12 md:w-24 h-1 transition-colors ${
+                    className={`w-8 sm:w-16 md:w-24 h-1 rounded-full transition-colors mx-1 ${
                       getStepIndex(currentStep) > index
-                        ? "bg-green-500"
-                        : "bg-gray-200"
+                        ? "bg-[#d4af37]"
+                        : "bg-gray-200 dark:bg-slate-700"
                     }`}
                   />
                 )}
@@ -313,12 +313,12 @@ export default function ApplyForm() {
 
       {/* Navigation Buttons */}
       {currentStep !== "form" && (
-        <div className="flex justify-between mt-8">
+        <div className="flex justify-between gap-4 mt-10">
           <Button
             variant="outline"
             onClick={handleBack}
             disabled={currentStep === "type"}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 h-12 px-6 rounded-xl border-2 border-gray-200 dark:border-slate-700 hover:border-[#722F37] hover:text-[#722F37] disabled:opacity-50"
           >
             <ArrowLeft className="w-4 h-4" />
             {t("navigation.back")}
@@ -327,7 +327,7 @@ export default function ApplyForm() {
           <Button
             onClick={handleNext}
             disabled={!canProceed()}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 h-12 px-6 rounded-xl bg-[#722F37] hover:bg-[#5a252c] text-white shadow-lg disabled:opacity-50 disabled:hover:bg-[#722F37]"
           >
             {t("navigation.continue")}
             <ArrowRight className="w-4 h-4" />

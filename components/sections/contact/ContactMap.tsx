@@ -1,14 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { MapPin, ExternalLink, Navigation } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function ContactMap() {
   const t = useTranslations("contact.map");
-  // Google Maps embed URL for Ogrodowa 58, Warsaw, Poland
+
   const mapEmbedUrl =
     "https://maps.google.com/maps?q=Ogrodowa+58,00-876+Warsaw,Poland&t=&z=15&ie=UTF8&iwloc=&output=embed";
 
@@ -20,62 +18,65 @@ export default function ContactMap() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 20 }}
+      initial={{ opacity: 0, x: 30 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true, margin: "-50px" }}
       className="h-full"
     >
-      <Card className="shadow-lg h-full flex flex-col">
-        <CardHeader>
-          <CardTitle className="text-2xl md:text-3xl font-bold flex items-center gap-2">
-            <MapPin className="w-6 h-6 text-primary" />
+      <div className="h-full flex flex-col rounded-3xl overflow-hidden border-2 border-gray-100 dark:border-slate-800 shadow-xl bg-white dark:bg-slate-900">
+        {/* Header - Inside the card */}
+        <div className="p-8 pb-0">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#722F37]/10 border border-[#722F37]/20 mb-4">
+            <Navigation className="w-4 h-4 text-[#d4af37]" />
+            <span className="text-sm font-medium text-[#722F37]">Find Us</span>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+            <MapPin className="w-6 h-6 text-[#722F37]" />
             {t("title")}
-          </CardTitle>
-          <p className="text-muted-foreground mt-2">{t("subtitle")}</p>
-        </CardHeader>
-        <CardContent className="flex-1 flex flex-col">
-          {/* Map */}
-          <div className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden mb-4 border">
+          </h2>
+          <p className="text-muted-foreground text-sm mb-4">{t("subtitle")}</p>
+        </div>
+
+        {/* Map */}
+        <div className="relative flex-1 min-h-[300px] md:min-h-[350px] px-8 pb-8">
+          <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-gray-200 dark:border-slate-700">
             <iframe
               src={mapEmbedUrl}
               width="100%"
               height="100%"
-              style={{ border: 0 }}
+              style={{ border: 0, position: "absolute", inset: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0"
-              title="EIPU Location Map"
+              title="MUST Location Map"
+              className="w-full h-full"
             />
           </div>
+        </div>
 
-          {/* Address Info */}
-          <div className="space-y-4">
-            <div>
-              <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
-                {t("campusAddress")}
-              </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                {address.full}
-              </p>
-            </div>
-
-            {/* Directions Button */}
-            <Button asChild variant="outline" className="w-full">
-              <a
-                href={address.googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2"
-              >
-                {t("getDirections")}
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </Button>
+        {/* Address & CTA */}
+        <div className="p-8 pt-0 space-y-4">
+          <div className="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+              {t("campusAddress")}
+            </h4>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              {address.full}
+            </p>
           </div>
-        </CardContent>
-      </Card>
+
+          <a
+            href={address.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 w-full h-12 rounded-xl bg-[#722F37] hover:bg-[#5a252c] text-white font-semibold shadow-lg transition-all group"
+          >
+            {t("getDirections")}
+            <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </div>
     </motion.div>
   );
 }

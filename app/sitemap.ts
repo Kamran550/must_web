@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://eipu.edu.pl";
+  const baseUrl = "https://must.edu.pl";
   const locales = ["en", "tr", "ru"];
   const currentDate = new Date();
 

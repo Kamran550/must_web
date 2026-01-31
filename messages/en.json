@@ -30,19 +30,19 @@
     "apply": "Apply"
   },
   "hero": {
-    "title": "Shape Your Future with a World-Class Education",
-    "subtitle": "Join a global community of learners and gain the skills to lead tomorrow. Admissions are now open for the Spring 2026 intake.",
+    "title": "Science, Technology & Innovation at MUST",
+    "subtitle": "Join Mazovia University of Science and Technology in Warsaw. Build your future with programs rooted in research and excellence. Spring 2026 admissions open.",
     "primaryButton": "Apply Now",
     "secondaryButton": "Explore Programs"
   },
   "aboutPreview": {
-    "title": "About Us",
-    "description": "European International Peace University (EIPU) is an innovative higher education institution dedicated to fostering peace through education and global understanding. We provide our students with the knowledge and skills necessary to make positive changes in the world.",
+    "title": "About MUST",
+    "description": "Mazovia University of Science and Technology (MUST), established in 2020 in Warsaw, is a dynamic institution focused on science, technology, and innovation. We combine rigorous academic programs with practical research to prepare graduates for tomorrow's challenges.",
     "button": "Learn More"
   },
   "statistics": {
-    "title": "Our Impact in Numbers",
-    "subtitle": "Building excellence through quality education and global partnerships",
+    "title": "MUST in Numbers",
+    "subtitle": "Excellence in science and technology education since 2020",
     "students": "Students",
     "countries": "Countries",
     "programs": "Programs",
@@ -59,8 +59,8 @@
     "subtitle": "Success stories from our graduates"
   },
   "cta": {
-    "title": "Invest in Your Future",
-    "description": "Join the university where global leaders are formed. The application process is simple and fast.",
+    "title": "Start Your Journey at MUST",
+    "description": "Apply to Mazovia University of Science and Technology. Our streamlined application process makes it easy to take the next step in your academic career.",
     "button": "Apply Now",
     "learnMore": "Learn More"
   },
@@ -71,7 +71,7 @@
   },
   "about": {
     "hero": {
-      "title": "About European International Peace University",
+      "title": "About Mazovia University of Science and Technology",
       "subtitle": "Empowering minds, building peace, and shaping tomorrow's leaders through excellence in education and global collaboration."
     },
     "missionVision": {
@@ -98,7 +98,7 @@
     },
     "values": {
       "title": "Our Values",
-      "subtitle": "The principles that guide everything we do at EIPU",
+      "subtitle": "The principles that guide everything we do at MUST",
       "items": {
         "academicExcellence": {
           "title": "Academic Excellence",
@@ -132,7 +132,7 @@
       "milestones": {
         "2020": {
           "title": "Foundation",
-          "description": "European International Peace University was established with a vision to create a world-class institution dedicated to peace education and global citizenship."
+          "description": "Mazovia University of Science and Technology was established in 2020 with a vision to create a world-class institution dedicated to science, technology, and innovation in the heart of Mazovia."
         },
         "2021": {
           "title": "First Graduates",
@@ -140,7 +140,7 @@
         },
         "2022": {
           "title": "International Recognition",
-          "description": "EIPU received accreditation and established partnerships with leading universities worldwide, expanding our global reach."
+          "description": "MUST received accreditation and established partnerships with leading universities worldwide, expanding our global reach."
         },
         "2023": {
           "title": "Expansion",
@@ -155,11 +155,11 @@
         "fullName": "Full Name",
         "position": "Position",
         "fullNameValue": "Prof. Dr. Serdar KORAL",
-        "positionValue": "Rector of European International Peace University (EIPU)",
-        "description": "Prof. Dr. Serdar KORAL is an internationally respected academic, higher education leader, and advocate for peace-focused learning. With a career spanning more than two decades across multiple continents, he brings to the European International Peace University (EIPU) a unique blend of academic excellence, global vision, and a deep commitment to shaping the next generation of socially responsible leaders.",
+        "positionValue": "Rector of Mazovia University of Science and Technology (MUST)",
+        "description": "Prof. Dr. Serdar KORAL is an internationally respected academic, higher education leader, and advocate for peace-focused learning. With a career spanning more than two decades across multiple continents, he brings to the Mazovia University of Science and Technology (MUST) a unique blend of academic excellence, global vision, and a deep commitment to shaping the next generation of socially responsible leaders.",
         "qualifications": "Dr. KORAL holds a Ph.D. in Political Science and International Relations, with specializations in peace and conflict studies, global diplomacy, and intercultural communication. He has held academic and administrative positions at renowned institutions in Europe, Central Asia, and the Middle East. His academic journey is marked by a consistent focus on promoting dialogue, critical thinking, and ethical leadership in higher education.",
         "email": "Email",
-        "emailValue": "serdar.koral@eipu.edu.pl"
+        "emailValue": "serdar.koral@must.edu.pl"
       },
       "welcomeMessage": {
         "title": "Welcome Message from the Rector",
@@ -183,22 +183,22 @@
       "viceRector": {
         "position": "Vice Rector",
         "name": "Marlene Treiblach",
-        "email": "marlene.treiblach@eipu.edu.pl"
+        "email": "marlene.treiblach@must.edu.pl"
       },
       "rectorAdvisor": {
         "position": "Rector Advisor",
         "name": "Milena Zaworska",
-        "email": "milena.zaworska@eipu.edu.pl"
+        "email": "milena.zaworska@must.edu.pl"
       },
       "secretaryGeneral": {
         "position": "Secretary General",
         "name": "Martin Dravoski",
-        "email": "martin.dravoski@eipu.edu.pl"
+        "email": "martin.dravoski@must.edu.pl"
       },
       "officeDirector": {
         "position": "Office Director",
         "name": "Elvir Droslan",
-        "email": "elvir.droslan@eipu.edu.pl"
+        "email": "elvir.droslan@must.edu.pl"
       }
     }
   },
@@ -470,7 +470,7 @@
   "news": {
     "hero": {
       "title": "News & Updates",
-      "subtitle": "Stay informed about the latest news, events, announcements, and achievements at European International Peace University."
+      "subtitle": "Stay informed about the latest news, events, announcements, and achievements at Mazovia University of Science and Technology."
     },
     "grid": {
       "featuredNews": "Featured News",
@@ -497,7 +497,7 @@
     },
     "newsletter": {
       "title": "Stay Updated",
-      "description": "Subscribe to our newsletter and never miss important news, events, and updates from EIPU.",
+      "description": "Subscribe to our newsletter and never miss important news, events, and updates from MUST.",
       "emailPlaceholder": "Enter your email address",
       "subscribe": "Subscribe",
       "thankYou": "Thank you for subscribing!",
@@ -573,7 +573,7 @@
     }
   },
   "footer": {
-    "description": "European International Peace University - An international university combining education, peace, and culture.",
+    "description": "Mazovia University of Science and Technology (MUST) - A modern university in Warsaw combining academic excellence, innovation, and global perspectives.",
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "university": "University",
@@ -599,14 +599,21 @@
       "studentLife": "Student Life",
       "admissions": "Admissions"
     },
-    "copyright": "© {year} European International Peace University. All rights reserved.",
+    "copyright": "© {year} Mazovia University of Science and Technology. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
   },
   "apply": {
     "hero": {
-      "title": "Apply to EIPU",
-      "subtitle": "Start your academic journey with us. Choose your degree program and begin your application today."
+      "title": "Apply to MUST",
+      "subtitle": "Start your academic journey with us. Choose your degree program and begin your application today.",
+      "badge": "Online Application",
+      "steps": {
+        "step1": { "title": "Choose Type", "desc": "Student, Agency or Transfer" },
+        "step2": { "title": "Select Program", "desc": "Degree and faculty" },
+        "step3": { "title": "Fill Application", "desc": "Complete the form" },
+        "step4": { "title": "Submit", "desc": "We'll review your application" }
+      }
     },
     "applicantType": {
       "title": "I am applying as",

@@ -8,7 +8,6 @@ export default function ProgramsPage() {
     <main className="min-h-screen bg-zinc-50 font-sans dark:bg-black">
       <ProgramsHero />
       <ProgramsGrid />
-      {/* <TestimonialsSection /> */}
       <ApplyCTA />
     </main>
   );

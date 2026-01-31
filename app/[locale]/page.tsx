@@ -11,8 +11,6 @@ export default function Home() {
       <HeroSection />
       <AboutPreview />
       <StatisticsSection />
-      {/* <TeachersSection /> */}
-      {/* <TestimonialsSection /> */}
       <ApplyCTA />
     </main>
   );

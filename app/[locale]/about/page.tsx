@@ -14,7 +14,6 @@ export default function AboutPage() {
       <UniversityValues />
       <AboutHistory />
       <StatisticsSection />
-      {/* <TeachersSection /> */}
       <ApplyCTA />
     </main>
   );
