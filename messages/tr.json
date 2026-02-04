@@ -38,7 +38,31 @@
   "aboutPreview": {
     "title": "MUST Hakkında",
     "description": "Mazovya Bilim ve Teknoloji Üniversitesi (MUST), 2020'de Varşova'da kurulmuş olup bilim, teknoloji ve inovasyona odaklanan dinamik bir kurumdur. Mezunları yarının zorluklarına hazırlamak için titiz akademik programları pratik araştırmalarla birleştiriyoruz.",
-    "button": "Daha Fazla Bilgi"
+    "button": "Daha Fazla Bilgi",
+    "badge": "MUST Hakkında",
+    "location": "Varşova, Polonya",
+    "campusTitle": "Kampüsümüz",
+    "campusDescription": "Mükemmellik ve inovasyon için tasarlanmış modern bir öğrenme ortamı",
+    "features": {
+      "modernCampus": "Modern Kampüs",
+      "modernCampusDescription": "En son teknoloji ile donatılmış son teknoloji tesisler, öğrenme ve inovasyon için ilham verici bir ortam yaratıyor.",
+      "excellence": "Mükemmellik",
+      "excellenceDescription": "Tüm programlarımızda en yüksek akademik kalite, araştırma mükemmelliği ve öğrenci başarısı standartlarına bağlıyız.",
+      "international": "Uluslararası",
+      "internationalDescription": "50'den fazla ülkeden öğrenci ve öğretim üyesi ile çeşitli bir küresel topluluk, kültürler arası anlayış ve işbirliğini teşvik ediyor.",
+      "community": "Topluluk",
+      "communityDescription": "Her öğrencinin değer gördüğü, saygı duyulduğu ve potansiyeline ulaşmak için güçlendirildiği destekleyici ve kapsayıcı bir ortam."
+    },
+    "additionalInfo": {
+      "title": "Neden MUST'u Seçmelisiniz?",
+      "description": "Mazovya Bilim ve Teknoloji Üniversitesi'nde, öğrencileri sürekli gelişen küresel ortamda başarıya hazırlayan dünya standartlarında eğitim sunmaya kararlıyız. Yenilikçi yaklaşımımız teorik bilgiyi pratik deneyimle birleştirerek, mezunlarımızın alanlarına anlamlı katkılar yapmaya hazır olmalarını sağlıyoruz.",
+      "highlights": {
+        "0": "Son teknoloji araştırma tesisleri ve laboratuvarlar",
+        "1": "Önde gelen üniversitelerle uluslararası ortaklıklar",
+        "2": "50'den fazla ülkeden çeşitli öğrenci topluluğu",
+        "3": "Sektör ihtiyaçlarına uygun kariyer odaklı programlar"
+      }
+    }
   },
   "statistics": {
     "title": "MUST Rakamlarla",
@@ -62,7 +86,15 @@
     "title": "MUST'ta Yolculuğunuza Başlayın",
     "description": "Mazovya Bilim ve Teknoloji Üniversitesi'ne başvurun. Sadeleştirilmiş başvuru sürecimiz akademik kariyerinizde bir sonraki adımı atmanızı kolaylaştırır.",
     "button": "Şimdi Başvur",
-    "learnMore": "Daha Fazla Bilgi"
+    "learnMore": "Daha Fazla Bilgi",
+    "badge": "Başvurular Açık",
+    "deadlineLabel": "Başvuru Son Tarihi",
+    "deadline": "2026 Bahar Dönemi başvuruları 20 Mart'ta kapanıyor",
+    "benefits": {
+      "globallyRecognized": "Küresel olarak tanınan programlar",
+      "experiencedFaculty": "Deneyimli ve uluslararası öğretim kadrosu",
+      "modernCampus": "Modern kampüs ve online öğrenme"
+    }
   },
   "language": {
     "en": "English",

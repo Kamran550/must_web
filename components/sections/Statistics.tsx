@@ -73,76 +73,103 @@ export default function StatisticsSection() {
   const t = useTranslations("statistics");
 
   return (
-    <section className="py-24 md:py-32 relative">
-      {/* Geometric background pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23722F37' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
-        aria-hidden
-      />
+    <section className="py-20 md:py-28 lg:py-32 relative bg-gradient-to-br from-[#722F37]/5 via-white to-[#d4af37]/5 dark:from-[#722F37]/10 dark:via-black dark:to-[#d4af37]/10 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Large circles */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#722F37]/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#d4af37]/5 rounded-full blur-3xl" />
+        
+        {/* Grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]"
+          style={{
+            backgroundImage: `linear-gradient(#722F37 1px, transparent 1px), linear-gradient(90deg, #722F37 1px, transparent 1px)`,
+            backgroundSize: "60px 60px",
+          }}
+        />
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
-        {/* Inline header - left aligned */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Centered header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, margin: "-80px" }}
-          className="mb-16"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-3 max-w-2xl">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
             {t("title", { default: "MUST in Numbers" })}
           </h2>
-          <div className="w-16 h-1 bg-[#722F37] rounded-full mb-4" />
-          <p className="text-muted-foreground text-lg max-w-xl">
+          <div className="w-32 h-1.5 bg-gradient-to-r from-[#722F37] via-[#d4af37] to-[#722F37] rounded-full mx-auto mb-6" />
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             {t("subtitle", {
               default: "Excellence in science and technology education since 2020",
             })}
           </p>
         </motion.div>
 
-        {/* Asymmetric bento grid - 2 large, 2 small */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        {/* Horizontal scrollable cards on mobile, grid on desktop */}
+        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 scrollbar-hide">
           {universityStats.map((stat, index) => {
             const Icon = statIcons[stat.label.toLowerCase()] || Award;
 
             return (
               <motion.div
                 key={stat.id}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{
                   duration: 0.5,
                   delay: index * 0.1,
                   type: "spring",
-                  stiffness: 80,
+                  stiffness: 100,
                 }}
                 viewport={{ once: true, margin: "-50px" }}
-                className="group relative overflow-hidden rounded-2xl border-2 border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900/50 backdrop-blur-sm hover:border-[#722F37]/50 dark:hover:border-[#722F37]/50 transition-all duration-300"
+                className="group relative min-w-[280px] md:min-w-0 flex-shrink-0 md:flex-shrink"
               >
-                {/* Icon top-left */}
-                <div className="absolute top-4 right-4 p-2 rounded-xl bg-[#722F37]/10 group-hover:bg-[#722F37]/20 transition-colors">
-                  <Icon className="w-6 h-6 text-[#722F37]" />
-                </div>
-
-                <div className="p-6 lg:p-8 flex flex-col min-h-[180px]">
-                  <div className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#722F37] dark:text-[#a04050] mb-2">
-                    <Counter end={stat.value} suffix={stat.suffix} duration={2} />
+                <div className="relative h-full bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 dark:border-gray-800 hover:border-[#722F37]/50 dark:hover:border-[#722F37]/50 overflow-hidden">
+                  {/* Decorative corner */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#722F37]/10 to-transparent rounded-bl-full" />
+                  
+                  {/* Icon */}
+                  <div className="relative mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#722F37]/10 to-[#722F37]/5 dark:from-[#722F37]/20 dark:to-[#722F37]/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="w-8 h-8 text-[#722F37] dark:text-[#a04050]" />
+                    </div>
                   </div>
-                  <p className="text-sm lg:text-base text-gray-600 dark:text-gray-400 font-medium mt-auto">
+
+                  {/* Number */}
+                  <div className="relative mb-4">
+                    <div className="text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-br from-[#722F37] to-[#5a252c] dark:from-[#a04050] dark:to-[#722F37] bg-clip-text text-transparent">
+                      <Counter end={stat.value} suffix={stat.suffix} duration={2} />
+                    </div>
+                  </div>
+
+                  {/* Label */}
+                  <p className="text-base md:text-lg font-semibold text-gray-700 dark:text-gray-300">
                     {t(stat.label.toLowerCase())}
                   </p>
-                </div>
 
-                {/* Bottom accent bar - visible on hover */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#722F37] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                  {/* Bottom accent line */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#722F37] via-[#d4af37] to-[#722F37] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
+                </div>
               </motion.div>
             );
           })}
         </div>
       </div>
+
+      <style jsx>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 }

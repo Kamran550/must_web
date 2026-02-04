@@ -38,7 +38,31 @@
   "aboutPreview": {
     "title": "About MUST",
     "description": "Mazovia University of Science and Technology (MUST), established in 2020 in Warsaw, is a dynamic institution focused on science, technology, and innovation. We combine rigorous academic programs with practical research to prepare graduates for tomorrow's challenges.",
-    "button": "Learn More"
+    "button": "Learn More",
+    "badge": "About MUST",
+    "location": "Warsaw, Poland",
+    "campusTitle": "Our Campus",
+    "campusDescription": "A modern learning environment designed for excellence and innovation",
+    "features": {
+      "modernCampus": "Modern Campus",
+      "modernCampusDescription": "State-of-the-art facilities equipped with the latest technology, creating an inspiring environment for learning and innovation.",
+      "excellence": "Excellence",
+      "excellenceDescription": "Committed to the highest standards of academic quality, research excellence, and student achievement in all our programs.",
+      "international": "International",
+      "internationalDescription": "A diverse global community with students and faculty from over 50 countries, fostering cross-cultural understanding and collaboration.",
+      "community": "Community",
+      "communityDescription": "A supportive and inclusive environment where every student is valued, respected, and empowered to reach their full potential."
+    },
+    "additionalInfo": {
+      "title": "Why Choose MUST?",
+      "description": "At Mazovia University of Science and Technology, we are committed to providing world-class education that prepares students for success in an ever-evolving global landscape. Our innovative approach combines theoretical knowledge with practical experience, ensuring our graduates are ready to make meaningful contributions to their fields.",
+      "highlights": {
+        "0": "Cutting-edge research facilities and laboratories",
+        "1": "International partnerships with leading universities",
+        "2": "Diverse student body from over 50 countries",
+        "3": "Career-focused programs aligned with industry needs"
+      }
+    }
   },
   "statistics": {
     "title": "MUST in Numbers",
@@ -62,7 +86,15 @@
     "title": "Start Your Journey at MUST",
     "description": "Apply to Mazovia University of Science and Technology. Our streamlined application process makes it easy to take the next step in your academic career.",
     "button": "Apply Now",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "badge": "Admissions Open",
+    "deadlineLabel": "Application Deadline",
+    "deadline": "Spring 2026 applications close on March 20",
+    "benefits": {
+      "globallyRecognized": "Globally recognized programs",
+      "experiencedFaculty": "Experienced and international faculty",
+      "modernCampus": "Modern campus & online learning"
+    }
   },
   "language": {
     "en": "English",
