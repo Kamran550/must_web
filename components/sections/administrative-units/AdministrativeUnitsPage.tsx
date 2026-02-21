@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Mail, Users } from "lucide-react";
+import { Mail, Phone, Building2, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function AdministrativeUnitsPage() {
@@ -41,90 +41,116 @@ export default function AdministrativeUnitsPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-linear-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-black dark:to-slate-950 font-sans pt-24 pb-20">
-      {/* Hero Section */}
-      <div className="relative bg-linear-to-r from-primary/10 via-primary/5 to-transparent dark:from-primary/20 dark:via-primary/10 border-b border-gray-200/50 dark:border-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <main className="min-h-screen bg-linear-to-br from-slate-900 via-blue-950 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black font-sans pt-24 pb-20">
+      {/* Animated Background Gradient */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      </div>
+
+      {/* Hero Section with Icon */}
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <div className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 dark:bg-primary/20 rounded-full mb-6">
-              <Users className="h-5 w-5 text-primary" />
-              <span className="text-sm font-semibold text-primary">
-                {t("title")}
-              </span>
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-linear-to-br from-amber-400 to-orange-500 rounded-2xl mb-8 shadow-xl">
+              <Building2 className="h-10 w-10 text-white" />
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent mb-4 tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 tracking-tight">
               {t("title")}
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <div className="w-24 h-1.5 bg-linear-to-r from-amber-400 via-orange-500 to-amber-400 mx-auto rounded-full mb-6" />
+            <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
               {t("subtitle")}
             </p>
           </motion.div>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        <div className="space-y-8">
+      {/* Staff Grid */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {staff.map((member, index) => (
             <motion.div
               key={member.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              whileHover={{ y: -8 }}
+              className="group"
             >
-              <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-3xl shadow-xl border border-gray-200/50 dark:border-slate-700/50 overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                <div className="md:flex">
-                  {/* Image Section */}
-                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 dark:from-primary/10 dark:via-primary/20 dark:to-primary/10 p-8 md:p-12 flex items-center justify-center">
-                    <div className="relative w-full max-w-xs aspect-square">
-                      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white/50 dark:ring-slate-800/50">
+              <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:border-amber-500/50 transition-all duration-500 shadow-2xl hover:shadow-amber-500/20">
+                {/* Card Header with Position Badge */}
+                <div className="absolute top-0 left-0 right-0 h-2 bg-linear-to-r from-amber-400 via-orange-500 to-amber-400" />
+                
+                <div className="p-8">
+                  {/* Image Container */}
+                  <div className="relative mb-6">
+                    <div className="relative w-48 h-48 mx-auto">
+                      <div className="absolute inset-0 bg-linear-to-br from-amber-400/20 to-orange-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                      <div className="relative w-full h-full rounded-2xl overflow-hidden ring-4 ring-white/10 group-hover:ring-amber-500/50 transition-all duration-500">
                         <Image
                           src={member.image}
                           alt={t(member.nameKey)}
                           fill
-                          className="object-cover"
+                          className="object-cover group-hover:scale-110 transition-transform duration-700"
                           priority={index === 0}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                      </div>
+                    </div>
+                    
+                    {/* Position Badge */}
+                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-max">
+                      <div className="flex items-center gap-2 px-4 py-2 bg-linear-to-r from-amber-500 to-orange-600 rounded-full shadow-lg">
+                        <Briefcase className="h-4 w-4 text-white" />
+                        <span className="text-xs font-bold text-white uppercase tracking-wider">
+                          {t(member.positionKey)}
+                        </span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Content Section */}
-                  <div className="md:w-2/3 p-8 md:p-12 flex flex-col justify-center">
-                    <div className="mb-6">
-                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 dark:bg-primary/20 rounded-full mb-4">
-                        <span className="text-xs font-semibold text-primary uppercase tracking-wide">
-                          {t(member.positionKey)}
-                        </span>
-                      </div>
-                      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
-                        {t(member.nameKey)}
-                      </h2>
-                      <div className="h-1 w-20 bg-linear-to-r from-primary to-primary/50 rounded-full"></div>
-                    </div>
+                  {/* Content */}
+                  <div className="text-center mt-8 mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300">
+                      {t(member.nameKey)}
+                    </h3>
+                  </div>
 
-                    <div className="flex items-center gap-3 p-4 bg-linear-to-r from-gray-50 to-transparent dark:from-slate-800/50 rounded-xl border border-gray-200/50 dark:border-slate-700/50">
-                      <div className="p-2 bg-primary/10 dark:bg-primary/20 rounded-lg">
-                        <Mail className="h-5 w-5 text-primary" />
+                  {/* Contact Info */}
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-amber-500/50 transition-all duration-300">
+                      <div className="flex items-center justify-center w-10 h-10 bg-amber-500/20 rounded-lg group-hover:bg-amber-500/30 transition-colors">
+                        <Mail className="h-5 w-5 text-amber-400" />
                       </div>
-                      <div className="flex-1">
-                        <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">
+                      <div className="flex-1 min-w-0">
+                        <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1">
                           Email
                         </p>
                         <a
                           href={`mailto:${t(member.emailKey)}`}
-                          className="text-base font-semibold text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-2 group"
+                          className="text-sm font-medium text-white hover:text-amber-400 transition-colors truncate block"
                         >
                           {t(member.emailKey)}
-                          <span className="opacity-0 group-hover:opacity-100 transition-opacity">
-                            →
-                          </span>
                         </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-3 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-amber-500/50 transition-all duration-300">
+                      <div className="flex items-center justify-center w-10 h-10 bg-amber-500/20 rounded-lg group-hover:bg-amber-500/30 transition-colors">
+                        <Phone className="h-5 w-5 text-amber-400" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1">
+                          Office
+                        </p>
+                        <p className="text-sm font-medium text-white">
+                          +48 22 579 10 00
+                        </p>
                       </div>
                     </div>
                   </div>

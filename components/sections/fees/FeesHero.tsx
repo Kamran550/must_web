@@ -8,9 +8,7 @@ export default function FeesHero() {
   const t = useTranslations("fees.hero");
 
   return (
-    <section className="relative w-full min-h-[60vh] pt-32 pb-20 overflow-hidden">
-      {/* Maroon gradient background */}
-      <div className="absolute inset-0 bg-linear-to-br from-[#722F37] via-[#5a252c] to-[#4a1f24]" />
+    <section className="relative w-full min-h-[60vh] pt-32 pb-20 overflow-hidden bg-[#005A7A]">
       
       {/* Geometric pattern overlay */}
       <div

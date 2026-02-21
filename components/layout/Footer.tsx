@@ -3,218 +3,142 @@
 import React from "react";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import { Phone, Mail, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-const contactInfo = {
-  phones: {
-    poland: "+48 579369968",
-    luxembourg: "+352 661115815",
-    turkey: "+90 538 6796595",
-    global: "+49 15207108026",
-  },
-  email: "info@must.edu.pl",
-  address: "Ogrodowa 5800-876 Warsaw / Poland",
-};
+const partnerLogos = [
+  { id: "ankuni", image: "/images/ANKUNI.png", name: "Ankara University", url: "https://ankara.edu.tr" },
+  { id: "arxiv", image: "/images/ARXIV.jpg", name: "arXiv", url: "https://arxiv.org" },
+  { id: "core", image: "/images/CORE.png", name: "CORE", url: "https://core.ac.uk" },
+  { id: "doaj", image: "/images/DOAJ.jpg", name: "DOAJ", url: "https://doaj.org" },
+  { id: "eric", image: "/images/ERIC.png", name: "ERIC", url: "https://eric.ed.gov" },
+  { id: "mit-ocw", image: "/images/MIT-OCW.png", name: "MIT OpenCourseWare", url: "https://ocw.mit.edu" },
+  { id: "odtu-metu", image: "/images/ODTUMETU.jpg", name: "METU / ODTÜ", url: "https://www.metu.edu.tr" },
+  { id: "otl", image: "/images/OTL.jpg", name: "Open Textbook Library", url: "https://open.umn.edu" },
+  { id: "sgh", image: "/images/SGH.png", name: "SGH Warsaw School", url: "https://www.sgh.waw.pl" },
+];
 
 export function Footer() {
   const t = useTranslations("footer");
-  const tLinks = useTranslations("footer.links");
-  const tUniversityLinks = useTranslations("footer.universityLinks");
-  const tPhoneNumbers = useTranslations("footer.phoneNumbers");
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = [
-    { href: "/about", key: "about" },
-    { href: "/programs", key: "programs" },
-    { href: "/fees", key: "fees" },
-    { href: "/contact", key: "contact" },
-    { href: "/apply", key: "apply" },
-    { href: "/e-library", key: "eLibrary" },
-  ];
-
-  const universityLinks = [
-    { key: "academicPrograms" },
-    { key: "researchInnovation" },
-    { key: "studentLife" },
-    { key: "admissions" },
-  ];
-
   return (
-    <footer className="bg-linear-to-br from-[#0f0a0b] via-[#1a0f10] to-[#151218] text-gray-300 border-t-2 border-[#722F37]/30 relative overflow-hidden">
-      {/* Gold accent line at top - MUST brand */}
+    <footer className="bg-linear-to-br from-[#0f0a0b] via-[#1a0f10] to-[#151218] relative overflow-hidden">
+      {/* Gold accent line at top */}
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-[#d4af37]/60 to-transparent" aria-hidden />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          {/* Logo və Açıqlama */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-6 group">
-              <div className="relative transition-transform group-hover:scale-105">
+
+      {/* Partner Logos Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-5 lg:gap-6">
+          {partnerLogos.map((logo) => (
+            <a
+              key={logo.id}
+              href={logo.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group shrink-0 transition-all duration-300 hover:scale-105"
+              title={logo.name}
+            >
+              <div className="relative h-11 w-[5.5rem] md:h-[3.25rem] md:w-[6.5rem] bg-white/95 rounded-md overflow-hidden">
                 <Image
-                  src="/images/MUST-logo-dark.png"
-                  alt="MUST Logo"
-                  width={250}
-                  height={140}
-                  className="object-contain h-20 md:h-24 w-auto"
-                  priority
+                  src={logo.image}
+                  alt={logo.name}
+                  fill
+                  className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
+                  sizes="110px"
                 />
               </div>
-            </Link>
-            <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
-              {t("description")}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="border-t border-white/10" />
+      </div>
+
+      {/* Contact Information Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+          <div className="space-y-2">
+            <h3 className="text-sm font-semibold text-[#d4af37] uppercase tracking-wider">
+              {t("contactInfo.phone")}
+            </h3>
+            <div className="space-y-1">
+              <a
+                href="tel:+48225791000"
+                className="block text-base text-gray-300 hover:text-[#d4af37] transition-colors duration-200"
+              >
+                +48 22 579 10 00
+              </a>
+              <a
+                href="tel:+48225791001"
+                className="block text-base text-gray-300 hover:text-[#d4af37] transition-colors duration-200"
+              >
+                +48 22 579 10 01
+              </a>
+            </div>
+          </div>
+          
+          <div className="space-y-2">
+            <h3 className="text-sm font-semibold text-[#d4af37] uppercase tracking-wider">
+              {t("contactInfo.email")}
+            </h3>
+            <a
+              href="mailto:info@must.edu.pl"
+              className="block text-base text-gray-300 hover:text-[#d4af37] transition-colors duration-200"
+            >
+              info@must.edu.pl
+            </a>
+          </div>
+          
+          <div className="space-y-2">
+            <h3 className="text-sm font-semibold text-[#d4af37] uppercase tracking-wider">
+              {t("contactInfo.address")}
+            </h3>
+            <p className="text-base text-gray-300 leading-relaxed">
+              Warsaw, Poland
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-[#d4af37] font-semibold text-lg mb-4 md:mb-6 tracking-wide">
-              {t("quickLinks")}
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-[#d4af37] transition-colors text-sm md:text-base inline-block"
-                  >
-                    {tLinks(link.key)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="lg:col-span-1">
-            <h3 className="text-[#d4af37] font-semibold text-lg mb-4 md:mb-6 tracking-wide">
-              {t("contact")}
-            </h3>
-            <ul className="space-y-4">
-              {/* Phone Numbers */}
-              <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-[#d4af37] mt-0.5 shrink-0" />
-                <div className="space-y-2 flex-1">
-                  <div>
-                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
-                      {tPhoneNumbers("turkey")}:
-                    </span>
-                    <a
-                      href={`tel:${contactInfo.phones.turkey.replace(
-                        /\s/g,
-                        ""
-                      )}`}
-                      className="text-gray-400 hover:text-[#d4af37] transition-colors text-sm md:text-base"
-                    >
-                      {contactInfo.phones.turkey}
-                    </a>
-                  </div>
-
-                  <div>
-                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
-                      {tPhoneNumbers("poland")}:
-                    </span>
-                    <a
-                      href={`tel:${contactInfo.phones.poland.replace(
-                        /\s/g,
-                        ""
-                      )}`}
-                      className="text-gray-400 hover:text-[#d4af37] transition-colors text-sm md:text-base"
-                    >
-                      {contactInfo.phones.poland}
-                    </a>
-                  </div>
-                  <div>
-                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
-                      {tPhoneNumbers("luxembourg")}:
-                    </span>
-                    <a
-                      href={`tel:${contactInfo.phones.luxembourg.replace(
-                        /\s/g,
-                        ""
-                      )}`}
-                      className="text-gray-400 hover:text-[#d4af37] transition-colors text-sm md:text-base"
-                    >
-                      {contactInfo.phones.luxembourg}
-                    </a>
-                  </div>
-                  <div>
-                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
-                      {tPhoneNumbers("global")}:
-                    </span>
-                    <a
-                      href={`tel:${contactInfo.phones.global.replace(
-                        /\s/g,
-                        ""
-                      )}`}
-                      className="text-gray-400 hover:text-[#d4af37] transition-colors text-sm md:text-base"
-                    >
-                      {contactInfo.phones.global}
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li className="flex items-start space-x-3">
-                <div className="w-5 h-5 shrink-0" />
-                <span className="text-gray-400 text-sm md:text-base">
-                  {t("linesAreOpen")}
-                </span>
-              </li>
-
-              <li className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-[#d4af37] mt-0.5 shrink-0" />
-                <div>
-                  <a
-                    href={`mailto:${contactInfo.email}`}
-                    className="text-gray-400 hover:text-[#d4af37] transition-colors text-sm md:text-base break-all"
-                  >
-                    {contactInfo.email}
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-[#d4af37] mt-0.5 shrink-0" />
-                <div>
-                  <span className="text-gray-400 text-sm md:text-base">
-                    {contactInfo.address}
-                  </span>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          {/* Additional Info */}
-          <div>
-            <h3 className="text-[#d4af37] font-semibold text-lg mb-4 md:mb-6 tracking-wide">
-              {t("university")}
-            </h3>
-            <ul className="space-y-3 text-gray-400 text-sm md:text-base">
-              {universityLinks.map((link) => (
-                <li key={link.key}>{tUniversityLinks(link.key)}</li>
-              ))}
-            </ul>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 md:mt-16 pt-8 border-t border-[#722F37]/20">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-gray-500 text-center md:text-left">
-              {t("copyright", { year: currentYear })}
-            </p>
-            <div className="flex items-center space-x-6 text-sm text-gray-500">
-              <Link
-                href="/privacy"
-                className="hover:text-[#d4af37] transition-colors"
-              >
-                {t("privacyPolicy")}
-              </Link>
-              <Link
-                href="/terms"
-                className="hover:text-[#d4af37] transition-colors"
-              >
-                {t("termsOfService")}
-              </Link>
-            </div>
+      {/* Divider */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="border-t border-white/10" />
+      </div>
+
+      {/* Bottom Copyright Bar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-sm text-gray-400 text-center sm:text-left">
+            {t("copyright", { year: currentYear })}
+          </p>
+          <div className="flex items-center gap-6 text-sm text-gray-400">
+            <Link
+              href="/apply"
+              className="hover:text-[#d4af37] transition-colors duration-200"
+            >
+              {t("links.apply")}
+            </Link>
+            <Link
+              href="/about"
+              className="hover:text-[#d4af37] transition-colors duration-200"
+            >
+              Sitemap
+            </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-[#d4af37] transition-colors duration-200"
+            >
+              {t("privacyPolicy")}
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-[#d4af37] transition-colors duration-200"
+            >
+              {t("termsOfService")}
+            </Link>
           </div>
         </div>
       </div>

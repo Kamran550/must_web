@@ -1,17 +1,25 @@
-import HeroSection from "@/components/sections/HeroSection";
-import AboutPreview from "@/components/sections/AboutPreview";
-// import { TeachersSection } from "@/components/sections/Teachers";
-import StatisticsSection from "@/components/sections/Statistics";
-// import TestimonialsSection from "@/components/sections/Testimonials";
+import HeroCentered from "@/components/sections/home/HeroCentered";
+import ProgramsExplorer from "@/components/sections/home/ProgramsExplorer";
+import AdmissionSteps from "@/components/sections/home/AdmissionSteps";
+import TuitionScholarship from "@/components/sections/home/TuitionScholarship";
+import NewsPreview from "@/components/sections/home/NewsPreview";
 import ApplyCTA from "@/components/sections/ApplyCTA";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white font-sans dark:bg-black">
-      <HeroSection />
-      <AboutPreview />
-      <StatisticsSection />
+    <main className="min-h-screen bg-[#005A7A] font-sans">
+      <HeroCentered />
+
+      <ProgramsExplorer />
+
+      <AdmissionSteps />
+
+      <TuitionScholarship />
+
+      <NewsPreview />
+
       <ApplyCTA />
+      {/* <ApplyBanner /> */}
     </main>
   );
 }

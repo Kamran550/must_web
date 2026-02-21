@@ -8,9 +8,7 @@ export default function ContactHero() {
   const t = useTranslations("contact.hero");
 
   return (
-    <section className="relative w-full min-h-[65vh] pt-32 pb-20 overflow-hidden">
-      {/* Maroon gradient background */}
-      <div className="absolute inset-0 bg-linear-to-br from-[#722F37] via-[#5a252c] to-[#3a191e]" />
+    <section className="relative w-full min-h-[65vh] pt-32 pb-20 overflow-hidden bg-[#005A7A]">
 
       {/* Pattern overlay */}
       <div
@@ -39,7 +37,7 @@ export default function ContactHero() {
             >
               <MessageCircle className="w-4 h-4 text-[#d4af37]" />
               <span className="text-white/90 text-sm font-medium">
-                Get in Touch
+                {t("badge")}
               </span>
             </motion.div>
 
@@ -61,10 +59,10 @@ export default function ContactHero() {
           >
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: Mail, label: "Email", value: "info@must.edu" },
-                { icon: MapPin, label: "Location", value: "Warsaw, Poland" },
-                { icon: Clock, label: "Hours", value: "Mon–Fri 9AM–6PM" },
-                { icon: MessageCircle, label: "Response", value: "Within 24h" },
+                { icon: Mail, label: t("quickEmail"), value: t("quickEmailValue") },
+                { icon: MapPin, label: t("quickLocation"), value: t("quickLocationValue") },
+                { icon: Clock, label: t("quickHours"), value: t("quickHoursValue") },
+                { icon: MessageCircle, label: t("quickResponse"), value: t("quickResponseValue") },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

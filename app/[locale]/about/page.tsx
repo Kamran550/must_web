@@ -8,7 +8,7 @@ import ApplyCTA from "@/components/sections/ApplyCTA";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-zinc-50 font-sans dark:bg-black">
+    <main className="min-h-screen font-sans">
       <AboutHero />
       <MissionVision />
       <UniversityValues />

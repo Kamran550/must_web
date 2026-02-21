@@ -1,10 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, CreditCard, Wallet, DollarSign, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { cn } from "@/lib/utils";
 
 const planKeys = [
   "fullPayment",
@@ -18,124 +20,130 @@ const planRecommended = [false, true, false, false] as const;
 
 export default function PaymentPlans() {
   const t = useTranslations("fees.paymentPlans");
+  const [activeIndex, setActiveIndex] = useState(1);
 
   return (
-    <section className="py-24 md:py-32 bg-linear-to-b from-slate-50 to-white dark:from-slate-900 dark:to-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Title - centered */}
+    <section className="py-16 md:py-24 bg-[#005A7A]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-80px" }}
-          className="text-center mb-16"
+          viewport={{ once: true }}
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
             {t("title")}
           </h2>
-          <div className="w-16 h-1 bg-[#722F37] rounded-full mx-auto mb-4" />
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-white/80 text-sm md:text-base max-w-lg mx-auto">
             {t("subtitle")}
           </p>
         </motion.div>
 
-        {/* Horizontal timeline-style cards */}
-        <div className="relative">
-          {/* Connection line - desktop only */}
-          <div className="hidden lg:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#722F37]/20 to-transparent" aria-hidden />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
-            {planKeys.map((key, index) => {
-              const Icon = planIcons[index];
-              const discount = planDiscounts[index];
-              const recommended = planRecommended[index];
-              const plan = {
-                name: t(`plans.${key}.name`),
-                description: t(`plans.${key}.description`),
-                benefits: t.raw(`plans.${key}.benefits`) as string[],
-                recommended,
-              };
-              
-              return (
-                <motion.div
-                  key={plan.name}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  className="relative"
-                >
-                  {/* Timeline dot */}
-                  <div className="hidden lg:flex absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border-4 border-[#722F37] items-center justify-center z-10">
-                    <div className="w-3 h-3 rounded-full bg-[#722F37]" />
-                  </div>
-                  
-                  <div
-                    className={`relative mt-8 lg:mt-12 rounded-2xl border-2 p-6 transition-all duration-300 hover:shadow-xl ${
-                      recommended
-                        ? "border-[#722F37] bg-[#722F37]/5 dark:bg-[#722F37]/10 shadow-lg"
-                        : "border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-[#722F37]/30"
-                    }`}
-                  >
-                    {recommended && (
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#722F37] text-white px-4 py-1 rounded-full text-xs font-semibold whitespace-nowrap">
-                        {t("recommended")}
-                      </div>
-                    )}
-                    
-                    {/* Icon */}
-                    <div className="w-12 h-12 rounded-xl bg-[#722F37]/10 dark:bg-[#722F37]/20 flex items-center justify-center mb-4 mx-auto">
-                      <Icon className="w-6 h-6 text-[#722F37]" />
-                    </div>
-                    
-                    {/* Discount badge */}
-                    {discount !== "Custom" ? (
-                      <div className="text-center mb-3">
-                        <span className="text-3xl font-bold text-[#722F37]">{discount}</span>
-                        <span className="text-sm text-muted-foreground ml-1">{t("off")}</span>
-                      </div>
-                    ) : (
-                      <div className="text-center mb-3">
-                        <span className="text-lg font-semibold text-[#722F37]">{t("customTerms")}</span>
-                      </div>
-                    )}
-                    
-                    <h3 className="text-lg font-bold text-center mb-2">{plan.name}</h3>
-                    <p className="text-sm text-muted-foreground text-center mb-6">
-                      {plan.description}
-                    </p>
-                    
-                    {/* Benefits */}
-                    <ul className="space-y-2 mb-6">
-                      {plan.benefits.map((benefit: string, idx: number) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300"
-                        >
-                          <span className="text-[#722F37] mt-0.5 shrink-0">✓</span>
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {planKeys.map((key, index) => {
+            const Icon = planIcons[index];
+            const plan = {
+              name: t(`plans.${key}.name`),
+              recommended: planRecommended[index],
+            };
+            return (
+              <button
+                key={key}
+                type="button"
+                onClick={() => setActiveIndex(index)}
+                className={cn(
+                  "flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-medium transition-all",
+                  activeIndex === index
+                    ? "bg-white text-[#005A7A] shadow-lg"
+                    : "bg-white/15 text-white hover:bg-white/25"
+                )}
+              >
+                <Icon className="w-4 h-4" />
+                {plan.name}
+                {plan.recommended && (
+                  <span className="text-[10px] uppercase font-bold opacity-80">•</span>
+                )}
+              </button>
+            );
+          })}
         </div>
 
-        {/* CTA */}
+        {/* Detail panel */}
+        <AnimatePresence mode="wait">
+          {planKeys.map((key, index) => {
+            if (index !== activeIndex) return null;
+            const Icon = planIcons[index];
+            const discount = planDiscounts[index];
+            const recommended = planRecommended[index];
+            const plan = {
+              name: t(`plans.${key}.name`),
+              description: t(`plans.${key}.description`),
+              benefits: t.raw(`plans.${key}.benefits`) as string[],
+            };
+
+            return (
+              <motion.div
+                key={key}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.25 }}
+                className="rounded-2xl border-2 border-white/30 bg-white/95 p-6 md:p-8 shadow-xl"
+              >
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-[#722F37]/10 flex items-center justify-center">
+                        <Icon className="w-6 h-6 text-[#722F37]" />
+                      </div>
+                      {recommended && (
+                        <span className="px-3 py-1 rounded-full bg-[#722F37] text-white text-xs font-semibold">
+                          {t("recommended")}
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                    <p className="text-gray-600 text-sm mb-6">{plan.description}</p>
+                    {discount !== "Custom" ? (
+                      <p className="text-3xl font-bold text-[#722F37]">
+                        {discount} {t("off")}
+                      </p>
+                    ) : (
+                      <p className="text-lg font-semibold text-[#722F37]">{t("customTerms")}</p>
+                    )}
+                  </div>
+                  <ul className="space-y-2 md:max-w-xs">
+                    {plan.benefits.map((benefit: string, idx: number) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-2 text-sm text-gray-600"
+                      >
+                        <span className="text-[#722F37] shrink-0">✓</span>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            );
+          })}
+        </AnimatePresence>
+
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true, margin: "-50px" }}
-          className="mt-16 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-10 text-center"
         >
-          <Button asChild size="lg" className="group bg-[#722F37] hover:bg-[#5a252c] text-white px-8 py-6 rounded-xl shadow-lg">
-            <Link href="/contact" className="flex items-center gap-2">
+          <Button
+            asChild
+            size="lg"
+            className="bg-[#722F37] hover:bg-[#5a252c] text-white rounded-xl gap-2"
+          >
+            <Link href="/contact">
               {t("contact")}
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </Button>
         </motion.div>

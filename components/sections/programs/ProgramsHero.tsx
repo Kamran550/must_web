@@ -8,9 +8,7 @@ export default function ProgramsHero() {
   const t = useTranslations("programs.hero");
 
   return (
-    <section className="relative w-full min-h-[70vh] pt-32 pb-20 overflow-hidden">
-      {/* Maroon gradient background */}
-      <div className="absolute inset-0 bg-linear-to-br from-[#722F37] via-[#5a252c] to-[#3a191e]" />
+    <section className="relative w-full min-h-[70vh] pt-32 pb-20 overflow-hidden bg-[#005A7A]">
 
       {/* Pattern overlay */}
       <div

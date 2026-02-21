@@ -23,17 +23,35 @@
     "about": "About",
     "rectorate": "Rectorate",
     "administrativeUnits": "Administrative Units",
-    "fees": "Fees",
-    "programs": "Programs",
-    "news": "News",
+    "eLibrary": "E-Library",
+    "fees": "Tuition",
+    "programs": "Academics",
+    "news": "Updates",
     "contact": "Contact",
-    "apply": "Apply"
+    "apply": "Apply",
+    "logoAlt": "Mazovia University of Science and Technology - MUST",
+    "menuAria": "Open menu"
   },
   "hero": {
     "title": "Science, Technology & Innovation at MUST",
     "subtitle": "Join Mazovia University of Science and Technology in Warsaw. Build your future with programs rooted in research and excellence. Spring 2026 admissions open.",
     "primaryButton": "Apply Now",
-    "secondaryButton": "Explore Programs"
+    "secondaryButton": "Explore Programs",
+    "kpi1Label": "Programs",
+    "kpi1Value": "50+",
+    "kpi2Label": "Students",
+    "kpi2Value": "2000+",
+    "kpi3Label": "Countries",
+    "kpi3Value": "50+",
+    "kpi4Label": "Years",
+    "kpi4Value": "5+",
+    "valueProp1Title": "Academic Excellence",
+    "valueProp1Description": "Rigorous programs and research-driven teaching to prepare you for tomorrow's challenges.",
+    "valueProp2Title": "Global Community",
+    "valueProp2Description": "Students and faculty from over 50 countries in a diverse, inclusive campus in Warsaw.",
+    "valueProp3Title": "Innovation & Technology",
+    "valueProp3Description": "Modern facilities and curricula aligned with industry and cutting-edge research.",
+    "campusImageAlt": "MUST Campus"
   },
   "aboutPreview": {
     "title": "About MUST",
@@ -96,6 +114,69 @@
       "modernCampus": "Modern campus & online learning"
     }
   },
+  "home": {
+    "whyMUST": {
+      "excellence": {
+        "title": "Academic Excellence",
+        "description": "Rigorous programs and research-driven teaching to prepare you for tomorrow's challenges."
+      },
+      "global": {
+        "title": "Global Community",
+        "description": "Students and faculty from over 50 countries in a diverse, inclusive campus in Warsaw."
+      },
+      "innovation": {
+        "title": "Innovation & Technology",
+        "description": "Modern facilities and curricula aligned with industry and cutting-edge research."
+      },
+      "support": {
+        "title": "Support Every Step",
+        "description": "From application to graduation, dedicated support for your academic journey."
+      }
+    },
+    "programsExplorer": {
+      "title": "Explore Programs",
+      "subtitle": "Find the right degree across undergraduate, graduate, and professional tracks.",
+      "viewAll": "View all programs"
+    },
+    "admissionSteps": {
+      "title": "How to Apply",
+      "subtitle": "A simple, transparent process from application to enrollment.",
+      "stepLabel": "Step {number}",
+      "apply": {
+        "title": "Prepare & Apply",
+        "description": "Submit your application and documents online."
+      },
+      "submit": {
+        "title": "Submit Documents",
+        "description": "Upload required academic and language certificates."
+      },
+      "review": {
+        "title": "Review",
+        "description": "Our team reviews your application and may invite you for an interview."
+      },
+      "enroll": {
+        "title": "Enroll",
+        "description": "Accept your offer, pay fees, and secure your place."
+      }
+    },
+    "tuitionScholarship": {
+      "tuition": {
+        "title": "Tuition & Fees",
+        "description": "Transparent pricing and flexible payment options for all programs.",
+        "link": "See tuition"
+      },
+      "scholarships": {
+        "title": "Scholarships",
+        "description": "Merit-based and need-based scholarships for qualified students.",
+        "link": "Explore scholarships"
+      }
+    },
+    "newsPreview": {
+      "title": "News & Updates",
+      "subtitle": "Latest from MUST.",
+      "viewAll": "All news"
+    }
+  },
   "language": {
     "en": "English",
     "tr": "Türkçe",
@@ -104,7 +185,12 @@
   "about": {
     "hero": {
       "title": "About Mazovia University of Science and Technology",
-      "subtitle": "Empowering minds, building peace, and shaping tomorrow's leaders through excellence in education and global collaboration."
+      "subtitle": "Empowering minds, building peace, and shaping tomorrow's leaders through excellence in education and global collaboration.",
+      "badge": "Est. 2020 • Warsaw, Poland",
+      "founded": "Founded",
+      "location": "Location",
+      "locationValue": "Warsaw",
+      "students": "Students"
     },
     "missionVision": {
       "title": "Our Mission & Vision",
@@ -236,12 +322,12 @@
   },
   "fees": {
     "hero": {
-      "title": "Tuition Fees & Payment Plans",
-      "subtitle": "Affordable education with flexible payment options. Explore our competitive tuition fees, payment plans, and scholarship opportunities designed to make quality education accessible."
+      "title": "Study Costs Made Simple",
+      "subtitle": "Clear tuition details, student-friendly payment solutions, and financial support options — all designed to help you focus on learning, not expenses."
     },
     "priceTable": {
-      "title": "Program Fees",
-      "subtitle": "Transparent pricing for all our academic programs",
+      "title": "Program Tuitions",
+      "subtitle": "A clear overview of tuition structures for every academic program",
       "mostPopular": "Most Popular",
       "year": "/year",
       "total": "Total",
@@ -501,8 +587,8 @@
   },
   "news": {
     "hero": {
-      "title": "News & Updates",
-      "subtitle": "Stay informed about the latest news, events, announcements, and achievements at Mazovia University of Science and Technology."
+      "title": "Campus Highlights",
+      "subtitle": "Discover recent stories, important updates, upcoming activities, and key milestones from Mazovia University of Science and Technology."
     },
     "grid": {
       "featuredNews": "Featured News",
@@ -528,9 +614,9 @@
       "linkCopied": "Link copied to clipboard!"
     },
     "newsletter": {
-      "title": "Stay Updated",
-      "description": "Subscribe to our newsletter and never miss important news, events, and updates from MUST.",
-      "emailPlaceholder": "Enter your email address",
+      "title": "Don’t Miss What’s Next",
+      "description": "Join our mailing list to receive key announcements, campus insights, and upcoming activities from MUST.",
+      "emailPlaceholder": "Please write your email address",
       "subscribe": "Subscribe",
       "thankYou": "Thank you for subscribing!",
       "successMessage": "You'll receive our latest news and updates.",
@@ -548,11 +634,20 @@
   "contact": {
     "hero": {
       "title": "Contact Us",
-      "subtitle": "We're here to help! Get in touch with us through any of the following channels. Our team is ready to answer your questions and assist you with your educational journey."
+      "subtitle": "We're here to help! Get in touch with us through any of the following channels. Our team is ready to answer your questions and assist you with your educational journey.",
+      "badge": "Get in Touch",
+      "quickEmail": "Email",
+      "quickEmailValue": "info@must.edu",
+      "quickLocation": "Location",
+      "quickLocationValue": "Warsaw, Poland",
+      "quickHours": "Hours",
+      "quickHoursValue": "Mon–Fri 9AM–6PM",
+      "quickResponse": "Response",
+      "quickResponseValue": "Within 24h"
     },
     "info": {
       "title": "Get in Touch",
-      "subtitle": "Choose the best way to reach us. We're here to help!",
+      "subtitle": "Reach us by phone, email, or visit our campus. We respond within 24 hours on business days.",
       "phone": "Phone",
       "email": "Email",
       "address": "Address",
@@ -574,7 +669,7 @@
       "email": "Email *",
       "emailPlaceholder": "john@example.com",
       "phone": "Phone (Optional)",
-      "phonePlaceholder": "+994 50 123 4567",
+      "phonePlaceholder": "+48 123 456 789",
       "subject": "Subject *",
       "subjectPlaceholder": "General inquiry",
       "message": "Message *",
@@ -598,14 +693,14 @@
     },
     "social": {
       "followUs": "Follow Us",
-      "subtitle": "Stay connected with us on social media",
+      "subtitle": "Stay connected with MUST on social media for news, events, and updates.",
       "haveQuestions": "Have Questions?",
-      "faqDescription": "Check out our Frequently Asked Questions section for quick answers to common inquiries.",
+      "faqDescription": "Check our FAQ for quick answers, or contact us directly.",
       "viewFAQ": "View FAQ"
     }
   },
   "footer": {
-    "description": "Mazovia University of Science and Technology (MUST) - A modern university in Warsaw combining academic excellence, innovation, and global perspectives.",
+    "description": "MUST is a modern university in Warsaw combining science, technology, and innovation. We prepare graduates for global careers through research-led programmes and international partnerships.",
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "university": "University",
@@ -616,7 +711,12 @@
       "turkey": "Türkiye",
       "global": "Global"
     },
-    "linesAreOpen": "Lines are open: Monday – Friday 9:00am - 6:00 pm",
+    "contactInfo": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address"
+    },
+    "linesAreOpen": "Office hours: Mon–Fri 9:00–18:00",
     "links": {
       "about": "About",
       "programs": "Programs",
@@ -641,7 +741,10 @@
       "subtitle": "Start your academic journey with us. Choose your degree program and begin your application today.",
       "badge": "Online Application",
       "steps": {
-        "step1": { "title": "Choose Type", "desc": "Student, Agency or Transfer" },
+        "step1": {
+          "title": "Choose Type",
+          "desc": "Student, Agency or Transfer"
+        },
         "step2": { "title": "Select Program", "desc": "Degree and faculty" },
         "step3": { "title": "Fill Application", "desc": "Complete the form" },
         "step4": { "title": "Submit", "desc": "We'll review your application" }
@@ -665,13 +768,15 @@
       "error": "Failed to load degrees",
       "retry": "Retry",
       "noDegrees": "No degree programs available at the moment.",
-      "selected": "Selected Degree"
+      "selected": "Selected Degree",
+      "faculties": "faculties available"
     },
     "facultySelector": {
       "title": "Select Your Faculty",
       "subtitle": "Choose your desired faculty from the available options",
       "noFaculties": "No faculties available for this degree.",
       "selected": "Selected Faculty",
+      "clickToSelect": "Click to select",
       "languageSelection": {
         "title": "Select Teaching Language",
         "subtitle": "Choose the language of instruction for your program",
@@ -680,10 +785,17 @@
         "selected": "Selected Language"
       }
     },
+    "stepLabels": {
+      "type": "Type",
+      "degree": "Degree",
+      "faculty": "Faculty",
+      "form": "Form"
+    },
     "navigation": {
       "back": "Back",
       "continue": "Continue",
-      "submit": "Submit Application"
+      "submit": "Submit Application",
+      "step": "Step"
     },
     "studentForm": {
       "title": "Student Application Form",

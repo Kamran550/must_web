@@ -40,7 +40,7 @@ export default function ProgramsGrid() {
   }, [selectedCategory, searchQuery]);
 
   return (
-    <section className="py-24 md:py-32 relative">
+    <section className="py-24 md:py-32 relative bg-[#005A7A]">
       {/* Background pattern */}
       <div
         className="absolute inset-0 opacity-[0.02] dark:opacity-[0.03] pointer-events-none"
@@ -61,17 +61,17 @@ export default function ProgramsGrid() {
         >
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#722F37]/10 border border-[#722F37]/20 mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-4">
                 <BookOpen className="w-4 h-4 text-[#d4af37]" />
-                <span className="text-sm font-medium text-[#722F37]">
+                <span className="text-sm font-medium text-white">
                   Explore Programs
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-gray-900 dark:text-white">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-white">
                 {t("title")}
               </h2>
-              <div className="w-20 h-1 bg-[#722F37] rounded-full mb-4" />
-              <p className="text-muted-foreground text-lg max-w-xl">
+              <div className="w-20 h-1 bg-[#d4af37] rounded-full mb-4" />
+              <p className="text-white/90 text-lg max-w-xl">
                 {t("subtitle")}
               </p>
             </div>
@@ -84,7 +84,7 @@ export default function ProgramsGrid() {
                 placeholder={t("searchPlaceholder")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-12 h-12 rounded-xl border-2 border-gray-200 dark:border-slate-700 focus:border-[#722F37]"
+                className="pl-12 h-12 rounded-xl border-2 border-white/30 bg-white/95 text-gray-900 placeholder:text-gray-500 focus:border-[#d4af37]"
               />
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function ProgramsGrid() {
                 className={`px-5 py-2.5 rounded-xl font-medium text-sm transition-all ${
                   selectedCategory === category.id
                     ? "bg-[#722F37] text-white shadow-lg"
-                    : "bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-300 hover:bg-[#722F37]/10 hover:text-[#722F37]"
+                    : "bg-white/95 text-gray-700 hover:bg-white hover:text-[#722F37]"
                 }`}
               >
                 {tCategories(category.id)}
@@ -123,7 +123,7 @@ export default function ProgramsGrid() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="mb-8 flex items-center gap-2 text-sm text-muted-foreground"
+            className="mb-8 flex items-center gap-2 text-sm text-white/90"
           >
             <span className="w-2 h-2 rounded-full bg-[#722F37]" />
             {t("found")} <strong>{filteredPrograms.length}</strong>{" "}
@@ -142,12 +142,12 @@ export default function ProgramsGrid() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center py-20 px-6 rounded-3xl bg-gray-50 dark:bg-slate-900 border-2 border-dashed border-gray-200 dark:border-slate-700"
+            className="text-center py-20 px-6 rounded-3xl bg-white/95 border-2 border-dashed border-white/30"
           >
             <div className="w-16 h-16 rounded-2xl bg-[#722F37]/10 flex items-center justify-center mx-auto mb-4">
               <Search className="w-8 h-8 text-[#722F37]" />
             </div>
-            <p className="text-lg text-muted-foreground mb-4">{t("noResults")}</p>
+            <p className="text-lg text-gray-700 mb-4">{t("noResults")}</p>
             <Button
               variant="outline"
               onClick={() => {
@@ -177,10 +177,10 @@ function ProgramCard({ program, index }: { program: Program; index: number }) {
       className="group"
     >
       <Card
-        className={`h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl ${
+        className={`h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl bg-white/95 border-2 ${
           program.featured
-            ? "border-2 border-[#722F37] shadow-xl"
-            : "border-2 border-gray-100 dark:border-slate-800 hover:border-[#722F37]/30"
+            ? "border-[#722F37] shadow-xl"
+            : "border-white/30 hover:border-[#722F37]/50"
         }`}
       >
         {/* Featured banner */}
@@ -202,19 +202,19 @@ function ProgramCard({ program, index }: { program: Program; index: number }) {
             </div>
           </div>
 
-          <CardTitle className="text-xl font-bold mb-3 group-hover:text-[#722F37] transition-colors text-gray-900 dark:text-white">
+          <CardTitle className="text-xl font-bold mb-3 group-hover:text-[#722F37] transition-colors text-gray-900">
             {program.title}
           </CardTitle>
 
           {/* Duration */}
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2 text-sm text-gray-600">
             <Clock className="w-4 h-4 text-[#722F37]" />
             <span>{program.duration}</span>
           </div>
         </CardHeader>
 
         <CardContent className="flex-1 flex flex-col">
-          <p className="text-gray-600 dark:text-gray-300 mb-5 leading-relaxed text-sm line-clamp-3">
+          <p className="text-gray-600 mb-5 leading-relaxed text-sm line-clamp-3">
             {program.description}
           </p>
 
@@ -228,7 +228,7 @@ function ProgramCard({ program, index }: { program: Program; index: number }) {
               {program.features.slice(0, 3).map((feature, idx) => (
                 <li
                   key={idx}
-                  className="text-xs text-gray-600 dark:text-gray-300 flex items-start gap-2"
+                  className="text-xs text-gray-600 flex items-start gap-2"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37] mt-1.5 shrink-0" />
                   <span>{feature}</span>
@@ -238,7 +238,7 @@ function ProgramCard({ program, index }: { program: Program; index: number }) {
           </div>
 
           {/* Career Opportunities */}
-          <div className="mb-6 pt-4 border-t border-gray-100 dark:border-slate-800">
+          <div className="mb-6 pt-4 border-t border-gray-200">
             <h4 className="font-semibold text-sm mb-3 flex items-center gap-2">
               <Briefcase className="w-4 h-4 text-[#722F37]" />
               {t("careerPaths")}
@@ -247,7 +247,7 @@ function ProgramCard({ program, index }: { program: Program; index: number }) {
               {program.career.slice(0, 2).map((career, idx) => (
                 <span
                   key={idx}
-                  className="text-xs bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-300 px-3 py-1.5 rounded-lg"
+                  className="text-xs bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg"
                 >
                   {career}
                 </span>
@@ -265,7 +265,7 @@ function ProgramCard({ program, index }: { program: Program; index: number }) {
             <Button
               asChild
               variant="outline"
-              className="flex-1 group/btn border-2 border-gray-200 dark:border-slate-700 hover:border-[#722F37] hover:text-[#722F37]"
+              className="flex-1 group/btn border-2 border-gray-300 hover:border-[#722F37] hover:text-[#722F37]"
             >
               <Link href={`/programs/${program.id}`}>
                 {t("learnMore")}

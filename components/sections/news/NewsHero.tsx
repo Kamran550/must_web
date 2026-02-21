@@ -2,88 +2,54 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Newspaper, TrendingUp, Calendar, Users } from "lucide-react";
+import { Rss } from "lucide-react";
 
 export default function NewsHero() {
   const t = useTranslations("news.hero");
 
   return (
-    <section className="relative w-full min-h-[65vh] pt-32 pb-20 overflow-hidden">
-      {/* Maroon gradient background with pattern */}
-      <div className="absolute inset-0 bg-linear-to-br from-[#722F37] via-[#5a252c] to-[#3a191e]" />
-      
-      {/* Animated geometric pattern */}
+    <section className="relative w-full py-20 md:py-28 overflow-hidden bg-[#00304A]">
+      {/* Diagonal accent */}
       <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
+        className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-[#005A7A] to-transparent pointer-events-none"
         aria-hidden
       />
+      <div className="absolute top-0 right-0 w-1/2 h-full opacity-[0.06] pointer-events-none">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 80% 50%, white 1px, transparent 1px)`,
+            backgroundSize: "24px 24px",
+          }}
+        />
+      </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
-          {/* Left - Main content */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-7"
-          >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6"
-            >
-              <Newspaper className="w-4 h-4 text-[#d4af37]" />
-              <span className="text-white/90 text-sm font-medium">
-                Latest Updates
-              </span>
-            </motion.div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              {t("title")}
-            </h1>
-            <div className="w-20 h-1 bg-[#d4af37] rounded-full mb-6" />
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
-              {t("subtitle")}
-            </p>
-          </motion.div>
-
-          {/* Right - Stats cards */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-5"
-          >
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { icon: TrendingUp, label: "Total Articles", value: "150+" },
-                { icon: Calendar, label: "This Month", value: "12" },
-                { icon: Users, label: "Contributors", value: "25+" },
-                { icon: Newspaper, label: "Categories", value: "5" },
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all group"
-                >
-                  <stat.icon className="w-8 h-8 text-[#d4af37] mb-3 group-hover:scale-110 transition-transform" />
-                  <div className="text-3xl font-bold text-white mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-white/80">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#d4af37]/20 border border-[#d4af37]/40 text-[#d4af37] text-xs font-medium uppercase tracking-wider mb-6"
+        >
+          <Rss className="w-3.5 h-3.5" />
+          {t("title").split(" ")[0]}
+        </motion.div>
+        <motion.h1
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.08 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-4"
+        >
+          {t("title")}
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.14 }}
+          className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed"
+        >
+          {t("subtitle")}
+        </motion.p>
       </div>
     </section>
   );

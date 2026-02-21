@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, GraduationCap, BookOpen, Award, Laptop } from "lucide-react";
+import { Check, GraduationCap, BookOpen, Award, Laptop, ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const programKeys = ["bachelors", "masters", "doctoral", "online"] as const;
 const programConfig = [
@@ -15,38 +16,27 @@ const programConfig = [
 
 export default function ProgramPriceTable() {
   const t = useTranslations("fees.priceTable");
+  const [expandedId, setExpandedId] = useState<number | null>(0);
 
   return (
-    <section className="py-24 md:py-32 relative">
-      {/* Subtle background pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.02] dark:opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23722F37' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")`,
-        }}
-        aria-hidden
-      />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Title - left aligned */}
+    <section className="py-16 md:py-24 relative bg-[#00304A]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-80px" }}
-          className="mb-16"
+          viewport={{ once: true }}
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-3">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">
             {t("title")}
           </h2>
-          <div className="w-16 h-1 bg-[#722F37] rounded-full mb-4" />
-          <p className="text-muted-foreground text-lg max-w-2xl">
+          <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto">
             {t("subtitle")}
           </p>
         </motion.div>
 
-        {/* Bento Grid - asymmetric layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Stacked list - each program is a row that expands to show features */}
+        <div className="space-y-3">
           {programKeys.map((key, index) => {
             const config = programConfig[index];
             const Icon = config.icon;
@@ -56,92 +46,87 @@ export default function ProgramPriceTable() {
               duration: t(`programs.${key}.duration`),
               features: t.raw(`programs.${key}.features`) as string[],
             };
-            
-            // Make popular item span 2 columns on large screens
-            const isPopular = program.popular;
-            
+            const isOpen = expandedId === index;
+
             return (
               <motion.div
                 key={program.name}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                className={`relative ${isPopular ? 'lg:col-span-2 lg:row-span-1' : ''}`}
+                transition={{ delay: index * 0.06 }}
+                viewport={{ once: true }}
+                className={cn(
+                  "rounded-xl border-2 overflow-hidden transition-all",
+                  program.popular
+                    ? "border-[#722F37] bg-white shadow-lg"
+                    : "border-white/20 bg-white/95 hover:border-white/40"
+                )}
               >
-                <Card
-                  className={`h-full flex flex-col border-2 hover:shadow-xl transition-all duration-300 ${
-                    isPopular
-                      ? "border-[#722F37] bg-[#722F37]/5 dark:bg-[#722F37]/10"
-                      : "border-gray-200 dark:border-slate-700 hover:border-[#722F37]/30"
-                  }`}
+                <button
+                  type="button"
+                  onClick={() => setExpandedId(isOpen ? null : index)}
+                  className="w-full flex flex-col sm:flex-row sm:items-center gap-4 p-5 text-left"
                 >
-                  {isPopular && (
-                    <div className="absolute -top-3 left-6 bg-[#722F37] text-white px-4 py-1.5 rounded-full text-sm font-semibold shadow-lg">
-                      {t("mostPopular")}
+                  <div className="flex items-center gap-4 flex-1">
+                    <div className="w-12 h-12 rounded-xl bg-[#722F37]/10 flex items-center justify-center shrink-0">
+                      <Icon className="w-6 h-6 text-[#722F37]" />
                     </div>
-                  )}
-                  
-                  <CardHeader className={`${isPopular ? 'lg:flex lg:flex-row lg:items-start lg:gap-8' : ''}`}>
-                    <div className={`${isPopular ? 'lg:flex-1' : ''}`}>
-                      {/* Icon */}
-                      <div className="w-14 h-14 rounded-2xl bg-[#722F37]/10 dark:bg-[#722F37]/20 flex items-center justify-center mb-4">
-                        <Icon className="w-7 h-7 text-[#722F37]" />
-                      </div>
-                      
-                      <CardTitle className="text-xl md:text-2xl font-bold mb-2">
-                        {program.name}
-                      </CardTitle>
-                      <p className="text-sm text-muted-foreground mb-4">
-                        {program.duration}
-                      </p>
-                    </div>
-                    
-                    {/* Pricing */}
-                    <div className={`${isPopular ? 'lg:text-right' : ''}`}>
-                      <div className="flex items-baseline gap-1 mb-1">
-                        <span className="text-4xl font-bold text-[#722F37]">
-                          €{program.annualFee.toLocaleString()}
-                        </span>
-                        <span className="text-sm text-muted-foreground">
-                          {t("year")}
-                        </span>
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        {t("total")}: <span className="font-semibold text-gray-900 dark:text-white">€{program.totalFee.toLocaleString()}</span>
-                      </p>
-                    </div>
-                  </CardHeader>
-                  
-                  <CardContent className={`flex-1 ${isPopular ? 'lg:grid lg:grid-cols-2 lg:gap-6' : ''}`}>
-                    <ul className="space-y-3">
-                      {program.features.map((feature: string, idx: number) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <div className="shrink-0 w-5 h-5 rounded-full bg-[#722F37]/10 flex items-center justify-center mt-0.5">
-                            <Check className="w-3 h-3 text-[#722F37]" />
-                          </div>
-                          <span className="text-sm text-gray-600 dark:text-gray-300">
-                            {feature}
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <h3 className="font-bold text-gray-900">{program.name}</h3>
+                        {program.popular && (
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#722F37] text-white">
+                            {t("mostPopular")}
                           </span>
+                        )}
+                      </div>
+                      <p className="text-sm text-gray-500">{program.duration}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-6 sm:gap-8">
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-2xl font-bold text-[#722F37]">
+                        €{program.annualFee.toLocaleString()}
+                      </span>
+                      <span className="text-xs text-gray-500">{t("year")}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-500 text-sm">
+                      <span>{t("total")} €{program.totalFee.toLocaleString()}</span>
+                      <ChevronDown
+                        className={cn("w-4 h-4 transition-transform", isOpen && "rotate-180")}
+                      />
+                    </div>
+                  </div>
+                </button>
+                {isOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="border-t border-gray-100 px-5 pb-5 pt-2"
+                  >
+                    <ul className="space-y-2">
+                      {program.features.map((feature: string, idx: number) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
+                          <Check className="w-4 h-4 text-[#722F37] shrink-0 mt-0.5" />
+                          {feature}
                         </li>
                       ))}
                     </ul>
-                  </CardContent>
-                </Card>
+                  </motion.div>
+                )}
               </motion.div>
             );
           })}
         </div>
 
-        {/* Note */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true, margin: "-50px" }}
-          className="mt-12 p-6 rounded-2xl bg-[#722F37]/5 border border-[#722F37]/10"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-8 p-4 rounded-xl bg-white/10 border border-white/20 text-center"
         >
-          <p className="text-sm text-muted-foreground text-center">{t("note")}</p>
+          <p className="text-sm text-white/90">{t("note")}</p>
         </motion.div>
       </div>
     </section>
