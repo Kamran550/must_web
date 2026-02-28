@@ -56,6 +56,8 @@ export default function StudentApplicationForm({
     if (degreeId === 1) return DegreeType.Bachelor;
     if (degreeId === 2) return DegreeType.Master;
     if (degreeId === 3) return DegreeType.PhD;
+    if (degreeId === 4) return DegreeType.MasterWithoutThesis;
+
     throw new Error("Degree type not found");
   }
 
@@ -90,7 +92,10 @@ export default function StudentApplicationForm({
     educationDocuments.high_school_transcript = z
       .any()
       .refine((file) => file?.length > 0, t("required"));
-  } else if (degreeType === DegreeType.Master) {
+  } else if (
+    degreeType === DegreeType.Master ||
+    degreeType === DegreeType.MasterWithoutThesis
+  ) {
     educationDocuments.bachelor_diploma = z.any().optional();
     educationDocuments.bachelor_transcript = z
       .any()
@@ -209,7 +214,10 @@ export default function StudentApplicationForm({
             "high_school_transcript",
             formData_any.high_school_transcript[0],
           );
-      } else if (degreeType === DegreeType.Master) {
+      } else if (
+        degreeType === DegreeType.Master ||
+        degreeType === DegreeType.MasterWithoutThesis
+      ) {
         if (
           formData_any.bachelor_diploma?.length > 0 &&
           formData_any.bachelor_diploma[0]
@@ -412,11 +420,6 @@ export default function StudentApplicationForm({
                                   >
                                     <span className="inline-flex flex-wrap items-baseline gap-x-1.5">
                                       <span>{program.name}</span>
-                                      {program.is_thesis && (
-                                        <span className="text-muted-foreground">
-                                          – {program.is_thesis}
-                                        </span>
-                                      )}
                                       {program.price_per_year != null && (
                                         <span className="text-muted-foreground">
                                           – €{program.price_per_year}/year
@@ -787,52 +790,55 @@ export default function StudentApplicationForm({
                         />
                       </>
                     )}
-                    {degreeType === DegreeType.Master && (
-                      <>
-                        <FormField
-                          control={form.control}
-                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                          name={"bachelor_diploma" as any}
-                          render={({
-                            field: { value, onChange, ...fieldProps },
-                          }) => (
-                            <FormItem>
-                              <FormLabel>{t("bachelorDiploma")}</FormLabel>
-                              <FormControl>
-                                <Input
-                                  {...fieldProps}
-                                  type="file"
-                                  accept=".jpg,.jpeg,.pdf"
-                                  onChange={(e) => onChange(e.target.files)}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                          name={"bachelor_transcript" as any}
-                          render={({
-                            field: { value, onChange, ...fieldProps },
-                          }) => (
-                            <FormItem>
-                              <FormLabel>{t("bachelorTranscript")} *</FormLabel>
-                              <FormControl>
-                                <Input
-                                  {...fieldProps}
-                                  type="file"
-                                  accept=".jpg,.jpeg,.pdf"
-                                  onChange={(e) => onChange(e.target.files)}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </>
-                    )}
+                    {degreeType === DegreeType.Master ||
+                      (degreeType === DegreeType.MasterWithoutThesis && (
+                        <>
+                          <FormField
+                            control={form.control}
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            name={"bachelor_diploma" as any}
+                            render={({
+                              field: { value, onChange, ...fieldProps },
+                            }) => (
+                              <FormItem>
+                                <FormLabel>{t("bachelorDiploma")}</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    {...fieldProps}
+                                    type="file"
+                                    accept=".jpg,.jpeg,.pdf"
+                                    onChange={(e) => onChange(e.target.files)}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <FormField
+                            control={form.control}
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            name={"bachelor_transcript" as any}
+                            render={({
+                              field: { value, onChange, ...fieldProps },
+                            }) => (
+                              <FormItem>
+                                <FormLabel>
+                                  {t("bachelorTranscript")} *
+                                </FormLabel>
+                                <FormControl>
+                                  <Input
+                                    {...fieldProps}
+                                    type="file"
+                                    accept=".jpg,.jpeg,.pdf"
+                                    onChange={(e) => onChange(e.target.files)}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </>
+                      ))}
                     {degreeType === DegreeType.PhD && (
                       <>
                         <FormField
