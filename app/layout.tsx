@@ -112,7 +112,7 @@ export const metadata: Metadata = {
 
   // Verification (Google Search Console, Bing, etc.)
   verification: {
-    google: "KLaSW1pDoMKO_L3uMzk9eMceecJ5d0d7Pvke5ldZkNs", // Google Search Console-dan alınacaq
+    google: "y-r-Nc1hvmr8LfyiuEbMBIP_2e7zTxHv3LdWaZdICxk", // Google Search Console-dan alınacaq
     // yandex: "YOUR_YANDEX_CODE",
     // bing: "YOUR_BING_CODE",
   },
