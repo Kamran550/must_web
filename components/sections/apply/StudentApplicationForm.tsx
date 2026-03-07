@@ -55,8 +55,8 @@ export default function StudentApplicationForm({
   function getDegreeType(degreeId: number): DegreeType {
     if (degreeId === 1) return DegreeType.Bachelor;
     if (degreeId === 2) return DegreeType.Master;
-    if (degreeId === 3) return DegreeType.PhD;
-    if (degreeId === 4) return DegreeType.MasterWithoutThesis;
+    if (degreeId === 3) return DegreeType.MasterWithoutThesis;
+    if (degreeId === 4) return DegreeType.PhD;
 
     throw new Error("Degree type not found");
   }
