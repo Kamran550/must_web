@@ -839,7 +839,7 @@ export default function TransferApplicationForm({
                         />
                       </>
                     )}
-                    {degreeType === DegreeType.Master || degreeType === DegreeType.MasterWithoutThesis && (
+                    {(degreeType === DegreeType.Master || degreeType === DegreeType.MasterWithoutThesis) && (
                       <>
                         <FormField
                           control={form.control}

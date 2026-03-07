@@ -790,8 +790,8 @@ export default function StudentApplicationForm({
                         />
                       </>
                     )}
-                    {degreeType === DegreeType.Master ||
-                      (degreeType === DegreeType.MasterWithoutThesis && (
+                    {(degreeType === DegreeType.Master ||
+                      degreeType === DegreeType.MasterWithoutThesis) && (
                         <>
                           <FormField
                             control={form.control}
@@ -838,7 +838,7 @@ export default function StudentApplicationForm({
                             )}
                           />
                         </>
-                      ))}
+                      )}
                     {degreeType === DegreeType.PhD && (
                       <>
                         <FormField
