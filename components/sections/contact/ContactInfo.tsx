@@ -5,9 +5,9 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const contactInfo = {
-  phone: { primary: "+48 579369968", hours: "Mon-Fri: 9:00 AM - 6:00 PM" },
+  phone: { primary: " +90 5386796595", hours: "Mon-Fri: 9:00 AM - 6:00 PM" },
   email: { primary: "info@must.edu", admissions: "international@must.edu", support: "rectorate@must.edu" },
-  address: { street: "Ogrodowa 58", city: "00-876 Warsaw", country: "Poland" },
+  address: { street: "Aleja Józefa Piłsudskiego 35", city: "09-407 Płock", country: "Poland" },
 };
 
 export default function ContactInfo() {
@@ -30,8 +30,7 @@ export default function ContactInfo() {
     },
     {
       icon: MapPin,
-      href: "https://www.google.com/maps/place/Ogrodowa+58,00-876+Warsaw,Poland",
-      label: t("address"),
+      href="https://www.google.com/maps?q=Aleja+Józefa+Piłsudskiego+35,+09-407+Płock,+Poland"      label: t("address"),
       value: `${contactInfo.address.street}, ${contactInfo.address.city}`,
       sub: contactInfo.address.country,
     },

@@ -102,16 +102,16 @@ export function Footer() {
             </h3>
             <div className="space-y-1">
               <a
-                href="tel:+48225791000"
+                href="tel:+48579277493"
                 className="block text-base text-gray-300 hover:text-[#d4af37] transition-colors duration-200"
               >
-                +48 22 579 10 00
+                +48579277493
               </a>
               <a
-                href="tel:+48225791001"
+                href="tel:+48579369968"
                 className="block text-base text-gray-300 hover:text-[#d4af37] transition-colors duration-200"
               >
-                +48 22 579 10 01
+                +48 579 369 968
               </a>
             </div>
           </div>

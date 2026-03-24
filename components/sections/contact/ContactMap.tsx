@@ -5,9 +5,8 @@ import { MapPin, ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const mapEmbedUrl =
-  "https://maps.google.com/maps?q=Ogrodowa+58,00-876+Warsaw,Poland&t=&z=15&ie=UTF8&iwloc=&output=embed";
-const googleMapsUrl =
-  "https://www.google.com/maps/place/Ogrodowa+58,00-876+Warsaw,Poland";
+"https://www.google.com/maps?q=Aleja+Józefa+Piłsudskiego+35,+09-407+Płock,+Poland"const googleMapsUrl =
+"https://www.google.com/maps?q=Aleja+Józefa+Piłsudskiego+35,+09-407+Płock,+Poland"
 
 export default function ContactMap() {
   const t = useTranslations("contact.map");
@@ -38,7 +37,7 @@ export default function ContactMap() {
               <div>
                 <h2 className="text-lg font-bold text-white">{t("title")}</h2>
                 <p className="text-sm text-white/90">
-                  {t("campusAddress")}: Ogrodowa 58, 00-876 Warsaw, Poland
+                  {t("campusAddress")}: Aleja Józefa Piłsudskiego 35, 09-407 Płock, Poland
                 </p>
               </div>
             </div>
