@@ -30,7 +30,8 @@ export default function ContactInfo() {
     },
     {
       icon: MapPin,
-      href="https://www.google.com/maps?q=Aleja+Józefa+Piłsudskiego+35,+09-407+Płock,+Poland"      label: t("address"),
+      href:"https://www.google.com/maps?q=Aleja+Józefa+Piłsudskiego+35,+09-407+Płock,+Poland",  
+      label: t("address"),
       value: `${contactInfo.address.street}, ${contactInfo.address.city}`,
       sub: contactInfo.address.country,
     },
