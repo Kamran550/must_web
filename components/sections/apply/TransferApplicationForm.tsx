@@ -338,7 +338,7 @@ export default function TransferApplicationForm({
         onSubmitSuccess?.();
       }, 3000);
     } catch (error) {
-      console.error("❌ Error submitting application:", error);
+      console.error("❌ Error submitting application:", error instanceof Error ? error.message : "Unknown error");
       alert(
         `Failed to submit application: ${
           error instanceof Error ? error.message : "Unknown error"

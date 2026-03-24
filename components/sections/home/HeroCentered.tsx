@@ -4,12 +4,24 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+// const SLIDE_IMAGES = [
+//   "/images/about-campus.png",
+//   "/images/queens-university.jpeg",
+//   "/images/University-01.jpg",
+//   "/images/hero-campus.jpg",
+// ];
+
+
 const SLIDE_IMAGES = [
-  "/images/about-campus.png",
-  "/images/queens-university.jpeg",
-  "/images/University-01.jpg",
-  "/images/hero-campus.jpg",
+  "images/campus-1.jpg",
+  "images/campus-2.jpg",
+  "images/campus-3.jpg",
+  "images/campus-4.jpg",
 ];
+
+
+
+
 
 const SLIDE_INTERVAL_MS = 5000;
 

@@ -272,12 +272,12 @@
         "title": "Rektör Profili",
         "fullName": "Ad Soyad",
         "position": "Pozisyon",
-        "fullNameValue": "Prof. Dr. Serdar KORAL",
+        "fullNameValue": "Prof. Dr. Hab. Tomasz Żelazowski-Krępski",
         "positionValue": "Mazovya Bilim ve Teknoloji Üniversitesi (MUST) Rektörü",
-        "description": "Prof. Dr. Serdar KORAL, uluslararası saygın bir akademisyen, yüksek öğretim lideri ve barış odaklı öğrenme savunucusudur. Kıtalar arası yirmi yılı aşkın bir kariyere sahip olan KORAL, Mazovya Bilim ve Teknoloji Üniversitesi'ne (MUST) akademik mükemmellik, küresel vizyon ve sosyal sorumluluk sahibi liderlerin bir sonraki neslini şekillendirme konusunda derin bir bağlılık getirmektedir.",
-        "qualifications": "Dr. KORAL, barış ve çatışma çalışmaları, küresel diplomasi ve kültürlerarası iletişim alanlarında uzmanlaşmış Siyaset Bilimi ve Uluslararası İlişkiler alanında doktora derecesine sahiptir. Avrupa, Orta Asya ve Orta Doğu'daki tanınmış kurumlarda akademik ve idari pozisyonlar almıştır. Akademik yolculuğu, yüksek öğretimde diyalog, eleştirel düşünme ve etik liderliği teşvik etmeye odaklanmıştır.",
+        "description": "Prof. Dr. Hab. Tomasz Żelazowski-Krępski, uluslararası saygın bir akademisyen, yüksek öğretim lideri ve barış odaklı öğrenme savunucusudur. Kıtalar arası yirmi yılı aşkın bir kariyere sahip olan KORAL, Mazovya Bilim ve Teknoloji Üniversitesi'ne (MUST) akademik mükemmellik, küresel vizyon ve sosyal sorumluluk sahibi liderlerin bir sonraki neslini şekillendirme konusunda derin bir bağlılık getirmektedir.",
+        "qualifications": "Dr. Hab. Tomasz Żelazowski-Krępski, barış ve çatışma çalışmaları, küresel diplomasi ve kültürlerarası iletişim alanlarında uzmanlaşmış Siyaset Bilimi ve Uluslararası İlişkiler alanında doktora derecesine sahiptir. Avrupa, Orta Asya ve Orta Doğu'daki tanınmış kurumlarda akademik ve idari pozisyonlar almıştır. Akademik yolculuğu, yüksek öğretimde diyalog, eleştirel düşünme ve etik liderliği teşvik etmeye odaklanmıştır.",
         "email": "E-posta",
-        "emailValue": "serdar.koral@must.edu.pl"
+        "emailValue": "tomasz.zelazowski-krepski@must.edu.pl"
       },
       "welcomeMessage": {
         "title": "Rektörden Hoş Geldiniz Mesajı",
@@ -287,7 +287,7 @@
         "paragraph3": "Birlikte, öğrenme, araştırma ve işbirliği yoluyla daha parlak bir gelecek inşa etmeye çalışacağız. Buradaki zamanınızın hem ödüllendirici hem de ilham verici olacağına inanıyorum.",
         "closing": "Çalışmalarınızda ve ötesinde başarı ve tatmin dilerim.",
         "signature": "Saygılarımla,",
-        "signatureName": "Prof. Dr. Serdar KORAL",
+        "signatureName": "Prof. Dr. Hab. Tomasz Żelazowski-Krępski",
         "signatureTitle": "Rektör"
       },
       "tabs": {
@@ -300,23 +300,23 @@
       "subtitle": "Mükemmellik ve hizmete adanmış idari ekibimizle tanışın",
       "viceRector": {
         "position": "Rektör Yardımcısı",
-        "name": "Marlene Treiblach",
-        "email": "marlene.treiblach@must.edu.pl"
+        "name": "Dr. Katarzyna Wrońska-Mirecka",
+        "email": "katarzyna.wronska-mirecka@must.edu.pl"
       },
       "rectorAdvisor": {
         "position": "Rektör Danışmanı",
-        "name": "Milena Zaworska",
-        "email": "milena.zaworska@must.edu.pl"
+        "name": "Mgr Paweł Dąbrowski-Leszczyński",
+        "email": "pawel.dabrowski-leszczynski@must.edu.pl"
       },
       "secretaryGeneral": {
         "position": "Genel Sekreter",
-        "name": "Martin Dravoski",
-        "email": "martin.dravoski@must.edu.pl"
+        "name": "Mgr Elżbieta Kaczmarek-Zawadzka",
+        "email": "elzbieta.kaczmarek-zawadzka@must.edu.pl"
       },
       "officeDirector": {
         "position": "Ofis Yöneticisi",
-        "name": "Elvir Droslan",
-        "email": "elvir.droslan@must.edu.pl"
+        "name": "Dr. Michał Brzeziński-Kowalik",
+        "email": "michal.brzezinski-kowalik@must.edu.pl"
       }
     }
   },

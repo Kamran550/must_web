@@ -277,7 +277,7 @@
         "description": "Проф. Д-р Сердар Корал - всемирно уважаемый ученый, лидер высшего образования. С карьерой, охватывающей более двух десятилетий на нескольких континентах, он привносит в Мазовецкий университет науки и технологий (MUST) уникальное сочетание академического превосходства, глобального видения и глубокой приверженности формированию следующего поколения ответственных лидеров.",
         "qualifications": "Д-р Корал имеет докторскую степень в области политологии и международных отношений со специализацией в исследованиях мира и конфликтов, глобальной дипломатии и межкультурной коммуникации. Он занимал академические и административные должности в известных учреждениях в Европе, Центральной Азии и на Ближнем Востоке. Его академический путь отмечен постоянным фокусом на продвижении диалога, критического мышления и этического лидерства в высшем образовании.",
         "email": "Электронная почта",
-        "emailValue": "serdar.koral@must.edu.pl"
+        "emailValue": "tomasz.zelazowski-krepski@must.edu.pl"
       },
       "welcomeMessage": {
         "title": "Приветственное послание от Ректора",
@@ -300,23 +300,23 @@
       "subtitle": "Познакомьтесь с нашей преданной административной командой, стремящейся к совершенству и служению",
       "viceRector": {
         "position": "Проректор",
-        "name": "Marlene Treiblach",
-        "email": "marlene.treiblach@must.edu.pl"
+        "name": "Dr. Katarzyna Wrońska-Mirecka",
+        "email": "katarzyna.wronska-mirecka@must.edu.pl"
       },
       "rectorAdvisor": {
         "position": "Советник Ректора",
-        "name": "Milena Zaworska",
-        "email": "milena.zaworska@must.edu.pl"
+        "name": "Mgr Paweł Dąbrowski-Leszczyński",
+        "email": "pawel.dabrowski-leszczynski@must.edu.pl"
       },
       "secretaryGeneral": {
         "position": "Генеральный секретарь",
-        "name": "Martin Dravoski",
-        "email": "martin.dravoski@must.edu.pl"
+        "name": "Mgr Elżbieta Kaczmarek-Zawadzka",
+        "email": "elzbieta.kaczmarek-zawadzka@must.edu.pl"
       },
       "officeDirector": {
         "position": "Директор офиса",
-        "name": "Elvir Droslan",
-        "email": "elvir.droslan@must.edu.pl"
+        "name": "Dr. Michał Brzeziński-Kowalik",
+        "email": "michal.brzezinski-kowalik@must.edu.pl"
       }
     }
   },

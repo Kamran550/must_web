@@ -52,10 +52,11 @@ export function LanguageSwitcher({
         disabled={isPending}
         className={cn(
           "group relative flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium transition-all duration-200",
-          "focus:outline-none focus:ring-2 focus:ring-offset-2",
+          "outline-none ring-0 focus:outline-none focus:ring-0",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
           isDark
-            ? "bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/30 focus:ring-white/40 shadow-lg backdrop-blur-sm"
-            : "bg-white hover:bg-gray-50 text-gray-700 border-2 border-gray-200 hover:border-[#722F37] focus:ring-[#722F37]/30 shadow-md",
+            ? "bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/30 focus-visible:ring-white/40 shadow-lg backdrop-blur-sm"
+            : "bg-white hover:bg-gray-50 text-gray-700 border-2 border-gray-200 hover:border-[#722F37] focus-visible:ring-[#722F37]/30 shadow-md",
           isPending && "opacity-50 cursor-not-allowed",
         )}
         aria-label="Select language"
@@ -118,7 +119,8 @@ export function LanguageSwitcher({
                     onClick={() => handleLanguageChange(lang.code)}
                     className={cn(
                       "w-full flex items-center gap-3 px-4 py-3 text-left transition-colors duration-150",
-                      "hover:bg-gray-100 focus:bg-gray-100 focus:outline-none",
+                      "hover:bg-gray-100 focus:bg-gray-100 outline-none ring-0",
+                      "focus:outline-none focus:ring-0 focus-visible:ring-2 focus-visible:ring-[#722F37]/40 focus-visible:ring-inset",
                       isActive && "bg-[#722F37]/10",
                     )}
                   >

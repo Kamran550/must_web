@@ -95,9 +95,18 @@ function Navbar() {
             {/* Logo - centered on mobile, right on desktop */}
             <Link
               href="/"
-              className="flex items-center gap-3 shrink-0 group absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 lg:ml-auto"
+              className="flex items-center gap-2 sm:gap-3 shrink-0 group absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 lg:ml-auto"
               aria-label={t("home")}
             >
+              <Image
+                src="/images/herb.png"
+                alt=""
+                width={56}
+                height={72}
+                className="object-contain h-9 sm:h-11 md:h-12 lg:h-16 w-auto shrink-0"
+                priority
+                sizes="(max-width: 640px) 36px, (max-width: 1024px) 48px, 64px"
+              />
               <Image
                 src="/images/MUST-logo-dark.png"
                 alt={t("logoAlt")}
@@ -130,6 +139,14 @@ function Navbar() {
                     <SheetHeader className="p-4 sm:p-5 border-b border-white/10">
                       <SheetTitle className="flex items-center justify-between">
                         <div className="flex items-center gap-2 sm:gap-3">
+                          <Image
+                            src="/images/herb.png"
+                            alt=""
+                            width={40}
+                            height={52}
+                            className="object-contain h-8 sm:h-10 w-auto shrink-0"
+                            sizes="40px"
+                          />
                           <Image
                             src="/images/MUST-logo-dark.png"
                             alt={t("logoAlt")}

@@ -5,17 +5,26 @@ import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
+// const partnerLogos = [
+//   { id: "ankuni", image: "/images/ANKUNI.png", name: "Ankara University", url: "https://ankara.edu.tr" },
+//   { id: "arxiv", image: "/images/ARXIV.jpg", name: "arXiv", url: "https://arxiv.org" },
+//   { id: "core", image: "/images/CORE.png", name: "CORE", url: "https://core.ac.uk" },
+//   { id: "doaj", image: "/images/DOAJ.jpg", name: "DOAJ", url: "https://doaj.org" },
+//   { id: "eric", image: "/images/ERIC.png", name: "ERIC", url: "https://eric.ed.gov" },
+//   { id: "mit-ocw", image: "/images/MIT-OCW.png", name: "MIT OpenCourseWare", url: "https://ocw.mit.edu" },
+//   { id: "odtu-metu", image: "/images/ODTUMETU.jpg", name: "METU / ODTÜ", url: "https://www.metu.edu.tr" },
+//   { id: "otl", image: "/images/OTL.jpg", name: "Open Textbook Library", url: "https://open.umn.edu" },
+//   { id: "sgh", image: "/images/SGH.png", name: "SGH Warsaw School", url: "https://www.sgh.waw.pl" },
+// ];
+
 const partnerLogos = [
-  { id: "ankuni", image: "/images/ANKUNI.png", name: "Ankara University", url: "https://ankara.edu.tr" },
-  { id: "arxiv", image: "/images/ARXIV.jpg", name: "arXiv", url: "https://arxiv.org" },
-  { id: "core", image: "/images/CORE.png", name: "CORE", url: "https://core.ac.uk" },
-  { id: "doaj", image: "/images/DOAJ.jpg", name: "DOAJ", url: "https://doaj.org" },
-  { id: "eric", image: "/images/ERIC.png", name: "ERIC", url: "https://eric.ed.gov" },
-  { id: "mit-ocw", image: "/images/MIT-OCW.png", name: "MIT OpenCourseWare", url: "https://ocw.mit.edu" },
-  { id: "odtu-metu", image: "/images/ODTUMETU.jpg", name: "METU / ODTÜ", url: "https://www.metu.edu.tr" },
-  { id: "otl", image: "/images/OTL.jpg", name: "Open Textbook Library", url: "https://open.umn.edu" },
-  { id: "sgh", image: "/images/SGH.png", name: "SGH Warsaw School", url: "https://www.sgh.waw.pl" },
-];
+  { id: "eua", image: "/images/EUA.png", name: "European University Association", url: "https://www.eua.eu" },
+  { id: "europejski", image: "/images/europejski-fundusz-rozw-regionalnego_en.jpg", name: "European Regional Development Fund", url:"https://www.ur.edu.pl/"},
+  {id: "magna", image: "/images/magna-charta.jpg", name: "MAGNA CHARTA", url:"https://www.magna-charta.org/"},
+  {id: "program", image: "/images/program-regionalny_en.jpg", name: "Program Regionalny", url:"https://www.eib.org/en/stories/innovation-cohesion"},
+  {id: "hr", image: "images/logo_hr.png", name: "HR", url:"https://hr.uek.krakow.pl/"},
+]
+
 
 export function Footer() {
   const t = useTranslations("footer");
