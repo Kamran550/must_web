@@ -13,10 +13,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 
 const SLIDE_IMAGES = [
-  "images/campus-1.jpg",
-  "images/campus-2.jpg",
-  "images/campus-3.jpg",
-  "images/campus-4.jpg",
+  "/images/campus-1.jpg",
+  "/images/campus-2.jpg",
+  "/images/campus-3.jpg",
+  "/images/campus-4.jpg",
 ];
 
 
