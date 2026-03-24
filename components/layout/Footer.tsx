@@ -18,13 +18,37 @@ import { useTranslations } from "next-intl";
 // ];
 
 const partnerLogos = [
-  { id: "eua", image: "/images/EUA.png", name: "European University Association", url: "https://www.eua.eu" },
-  { id: "europejski", image: "/images/europejski-fundusz-rozw-regionalnego_en.jpg", name: "European Regional Development Fund", url:"https://www.ur.edu.pl/"},
-  {id: "magna", image: "/images/magna-charta.jpg", name: "MAGNA CHARTA", url:"https://www.magna-charta.org/"},
-  {id: "program", image: "/images/program-regionalny_en.jpg", name: "Program Regionalny", url:"https://www.eib.org/en/stories/innovation-cohesion"},
-  {id: "hr", image: "images/logo_hr.png", name: "HR", url:"https://hr.uek.krakow.pl/"},
-]
-
+  {
+    id: "eua",
+    image: "/images/eua.jpg",
+    name: "European University Association",
+    url: "https://www.eua.eu",
+  },
+  {
+    id: "europejski",
+    image: "/images/europejski-fundusz-rozw-regionalnego_en.jpg",
+    name: "European Regional Development Fund",
+    url: "https://www.ur.edu.pl/",
+  },
+  {
+    id: "magna",
+    image: "/images/magna-charta.jpg",
+    name: "MAGNA CHARTA",
+    url: "https://www.magna-charta.org/",
+  },
+  {
+    id: "program",
+    image: "/images/program-regionalny_en.jpg",
+    name: "Program Regionalny",
+    url: "https://www.eib.org/en/stories/innovation-cohesion",
+  },
+  {
+    id: "sgh",
+    image: "/images/SGH.png",
+    name: "SGH Warsaw School",
+    url: "https://www.sgh.waw.pl",
+  },
+];
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -33,7 +57,10 @@ export function Footer() {
   return (
     <footer className="bg-linear-to-br from-[#0f0a0b] via-[#1a0f10] to-[#151218] relative overflow-hidden">
       {/* Gold accent line at top */}
-      <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-[#d4af37]/60 to-transparent" aria-hidden />
+      <div
+        className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-[#d4af37]/60 to-transparent"
+        aria-hidden
+      />
 
       {/* Partner Logos Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
@@ -88,7 +115,7 @@ export function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div className="space-y-2">
             <h3 className="text-sm font-semibold text-[#d4af37] uppercase tracking-wider">
               {t("contactInfo.email")}
@@ -100,7 +127,7 @@ export function Footer() {
               info@must.edu.pl
             </a>
           </div>
-          
+
           <div className="space-y-2">
             <h3 className="text-sm font-semibold text-[#d4af37] uppercase tracking-wider">
               {t("contactInfo.address")}
