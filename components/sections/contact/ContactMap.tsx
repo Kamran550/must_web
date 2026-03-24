@@ -5,8 +5,10 @@ import { MapPin, ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const mapEmbedUrl =
-"https://www.google.com/maps?q=Aleja+Józefa+Piłsudskiego+35,+09-407+Płock,+Poland"const googleMapsUrl =
-"https://www.google.com/maps?q=Aleja+Józefa+Piłsudskiego+35,+09-407+Płock,+Poland"
+  "https://www.google.com/maps?q=Aleja+Józefa+Piłsudskiego+35,+09-407+Płock,+Poland";
+const googleMapsUrl =
+  "https://www.google.com/maps/place/Ogrodowa+58,00-876+Warsaw,Poland";
+
 
 export default function ContactMap() {
   const t = useTranslations("contact.map");
