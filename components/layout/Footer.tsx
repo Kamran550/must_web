@@ -50,7 +50,7 @@ const partnerLogos = [
   },
   {
     id: "herb",
-    image: "/images/herp.png",
+    image: "/images/herb.png",
     name: "Ministry of Education and Science of Poland",
     url: "https://www.gov.pl/web/science",
   },
