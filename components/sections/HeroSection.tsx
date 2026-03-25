@@ -54,7 +54,7 @@ export default function HeroSection() {
         >
           <Sparkles className="w-4 h-4 text-[#d4af37]" />
           <span className="text-white font-semibold text-sm">
-            EST 2020 • Warsaw, Poland
+            EST 2020 • Płock, Poland
           </span>
           <MapPin className="w-4 h-4 text-[#d4af37]" />
         </motion.div>

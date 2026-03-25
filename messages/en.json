@@ -34,7 +34,7 @@
   },
   "hero": {
     "title": "Science, Technology & Innovation at MUST",
-    "subtitle": "Join Mazovia University of Science and Technology in Warsaw. Build your future with programs rooted in research and excellence. Spring 2026 admissions open.",
+    "subtitle": "Join Mazovia University of Science and Technology in Płock. Build your future with programs rooted in research and excellence. Spring 2026 admissions open.",
     "primaryButton": "Apply Now",
     "secondaryButton": "Explore Programs",
     "kpi1Label": "Programs",
@@ -48,17 +48,17 @@
     "valueProp1Title": "Academic Excellence",
     "valueProp1Description": "Rigorous programs and research-driven teaching to prepare you for tomorrow's challenges.",
     "valueProp2Title": "Global Community",
-    "valueProp2Description": "Students and faculty from over 50 countries in a diverse, inclusive campus in Warsaw.",
+    "valueProp2Description": "Students and faculty from over 50 countries in a diverse, inclusive campus in Płock.",
     "valueProp3Title": "Innovation & Technology",
     "valueProp3Description": "Modern facilities and curricula aligned with industry and cutting-edge research.",
     "campusImageAlt": "MUST Campus"
   },
   "aboutPreview": {
     "title": "About MUST",
-    "description": "Mazovia University of Science and Technology (MUST), established in 2020 in Warsaw, is a dynamic institution focused on science, technology, and innovation. We combine rigorous academic programs with practical research to prepare graduates for tomorrow's challenges.",
+    "description": "Mazovia University of Science and Technology (MUST), established in 2020 in Płock, is a dynamic institution focused on science, technology, and innovation. We combine rigorous academic programs with practical research to prepare graduates for tomorrow's challenges.",
     "button": "Learn More",
     "badge": "About MUST",
-    "location": "Warsaw, Poland",
+    "location": "Płock, Poland",
     "campusTitle": "Our Campus",
     "campusDescription": "A modern learning environment designed for excellence and innovation",
     "features": {
@@ -122,7 +122,7 @@
       },
       "global": {
         "title": "Global Community",
-        "description": "Students and faculty from over 50 countries in a diverse, inclusive campus in Warsaw."
+        "description": "Students and faculty from over 50 countries in a diverse, inclusive campus in Płock."
       },
       "innovation": {
         "title": "Innovation & Technology",
@@ -186,10 +186,10 @@
     "hero": {
       "title": "About Mazovia University of Science and Technology",
       "subtitle": "Empowering minds, building peace, and shaping tomorrow's leaders through excellence in education and global collaboration.",
-      "badge": "Est. 2020 • Warsaw, Poland",
+      "badge": "Est. 2020 • Płock, Poland",
       "founded": "Founded",
       "location": "Location",
-      "locationValue": "Warsaw",
+      "locationValue": "Płock",
       "students": "Students"
     },
     "missionVision": {
@@ -639,7 +639,7 @@
       "quickEmail": "Email",
       "quickEmailValue": "info@must.edu",
       "quickLocation": "Location",
-      "quickLocationValue": "Warsaw, Poland",
+      "quickLocationValue": "Płock, Poland",
       "quickHours": "Hours",
       "quickHoursValue": "Mon–Fri 9AM–6PM",
       "quickResponse": "Response",
@@ -700,7 +700,7 @@
     }
   },
   "footer": {
-    "description": "MUST is a modern university in Warsaw combining science, technology, and innovation. We prepare graduates for global careers through research-led programmes and international partnerships.",
+    "description": "MUST is a modern university in Płock combining science, technology, and innovation. We prepare graduates for global careers through research-led programmes and international partnerships.",
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "university": "University",
@@ -935,40 +935,40 @@
       "subtitle": "Curated trusted academic resources for our students and researchers",
       "footer": "These resources provide free access to our students and researchers. All resources are open access and suitable for academic research.",
       "ankuni": {
-        "name": "Ankara University",
-        "description": "Access to academic resources from Ankara University, one of Turkey's oldest universities."
+        "name": "Bodleian Libraries",
+        "description": "Access to one of the oldest and most prestigious library systems in the world, part of the University of Oxford, offering extensive academic resources, manuscripts, and research collections."
       },
       "arxiv": {
-        "name": "arXiv",
+        "name": "University of Cambridge Library",
         "description": "Open access archive for preprints in physics, mathematics, computer science, and other fields."
       },
       "core": {
-        "name": "CORE",
+        "name": "Huberlin",
         "description": "The world's largest collection of open access research articles."
       },
       "doaj": {
-        "name": "DOAJ",
+        "name": "Jagiellonian University Library",
         "description": "Directory of open access, peer-reviewed journals. Free access to quality academic publications."
       },
       "eric": {
-        "name": "ERIC",
+        "name": "University of Barcelona",
         "description": "Comprehensive digital library for education research and information."
       },
       "mitOcw": {
-        "name": "MIT OpenCourseWare",
+        "name": "Sorbonne University Library",
         "description": "Free online course materials and resources from Massachusetts Institute of Technology."
       },
       "odtuMetu": {
-        "name": "METU / ODTÜ",
+        "name": "Technical University of Munich",
         "description": "Open access academic resources and course materials from Middle East Technical University."
       },
       "otl": {
-        "name": "Open Textbook Library",
+        "name": "University College London Library",
         "description": "Collection of free, open-licensed textbooks. High-quality academic content."
       },
       "sgh": {
-        "name": "SGH Warsaw School",
-        "description": "Academic resources and research materials from Warsaw School of Economics."
+        "name": "Warsaw University of Technology Library",
+        "description": "Academic resources and research materials from Płock School of Economics."
       }
     }
   }

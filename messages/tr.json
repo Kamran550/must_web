@@ -936,39 +936,39 @@
       "subtitle": "Öğrencilerimiz ve araştırmacılarımız için seçilmiş güvenilir akademik kaynaklar",
       "footer": "Bu kaynaklar öğrencilerimize ve araştırmacılarımıza ücretsiz erişim sağlamaktadır. Tüm kaynaklar açık erişimli ve akademik araştırma için uygundur.",
       "ankuni": {
-        "name": "Ankara Üniversitesi",
-        "description": "Türkiye'nin en köklü üniversitelerinden biri olan Ankara Üniversitesi'nin akademik kaynaklarına erişim."
+        "name": "Bodleian Kütüphanesi",
+        "description": "Dünyanın en eski ve en prestijli kütüphane sistemlerinden biri olan, Oxford Üniversitesi'ne bağlı Bodleian Libraries'in akademik kaynaklarına, el yazmalarına ve araştırma koleksiyonlarına erişim."
       },
       "arxiv": {
-        "name": "arXiv",
+        "name": "Cambridge Üniversitesi Kütüphanesi",
         "description": "Fizik, matematik, bilgisayar bilimleri ve diğer alanlarda ön baskı makaleler için açık erişim arşivi."
       },
       "core": {
-        "name": "CORE",
+        "name": "Huberlin",
         "description": "Dünyanın en büyük açık erişim araştırma makaleleri koleksiyonu."
       },
       "doaj": {
-        "name": "DOAJ",
+        "name": "Jagiellonian",
         "description": "Açık erişimli, hakemli dergilerin dizini. Kaliteli akademik yayınlara ücretsiz erişim."
       },
       "eric": {
-        "name": "ERIC",
+        "name": "Barselona Üniversitesi",
         "description": "Eğitim araştırmaları ve bilgileri için kapsamlı dijital kütüphane."
       },
       "mitOcw": {
-        "name": "MIT OpenCourseWare",
+        "name": "Sorbonne Üniversitesi Kütüphanesi",
         "description": "Massachusetts Institute of Technology'nin ücretsiz online ders materyalleri ve kaynakları."
       },
       "odtuMetu": {
-        "name": "ODTÜ / METU",
-        "description": "Orta Doğu Teknik Üniversitesi'nin açık erişimli akademik kaynakları ve ders materyalleri."
+        "name": "Münih Teknik Üniversitesi",
+        "description": "Münih Teknik Üniversitesi'nin açık erişimli akademik kaynakları ve ders materyalleri."
       },
       "otl": {
-        "name": "Open Textbook Library",
+        "name": "University College London Kütüphanesi",
         "description": "Ücretsiz, açık lisanslı ders kitapları koleksiyonu. Yüksek kaliteli akademik içerikler."
       },
       "sgh": {
-        "name": "SGH Warsaw School",
+        "name": "Varşova Teknoloji Üniversitesi Kütüphanesi",
         "description": "Varşova İktisat Okulu'nun akademik kaynakları ve araştırma materyalleri."
       }
     }

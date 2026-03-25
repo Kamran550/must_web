@@ -14,7 +14,7 @@ import { useTranslations } from "next-intl";
 //   { id: "mit-ocw", image: "/images/MIT-OCW.png", name: "MIT OpenCourseWare", url: "https://ocw.mit.edu" },
 //   { id: "odtu-metu", image: "/images/ODTUMETU.jpg", name: "METU / ODTÜ", url: "https://www.metu.edu.tr" },
 //   { id: "otl", image: "/images/OTL.jpg", name: "Open Textbook Library", url: "https://open.umn.edu" },
-//   { id: "sgh", image: "/images/SGH.png", name: "SGH Warsaw School", url: "https://www.sgh.waw.pl" },
+//   { id: "sgh", image: "/images/SGH.png", name: "SGH Płock School", url: "https://www.sgh.waw.pl" },
 // ];
 
 const partnerLogos = [
@@ -45,9 +45,34 @@ const partnerLogos = [
   {
     id: "sgh",
     image: "/images/SGH.png",
-    name: "SGH Warsaw School",
+    name: "SGH Płock School",
     url: "https://www.sgh.waw.pl",
   },
+  {
+    id: "herb",
+    image: "/images/herp.png",
+    name: "Ministry of Education and Science of Poland",
+    url: "https://www.gov.pl/web/science",
+  },
+  {
+    id: "Polish Accreditation Committee",
+    image: "/images/polish-accreditation.png",
+    name: "Polish Accreditation Committee",
+    url: "https://pka.edu.pl/en/home-page/",
+  },
+  {
+    id: "Erasmus",
+    image: "/images/eu_flag-erasmus_vect_pos.jpg",
+    name: "Erasmus+ programme.",
+    url: "https://erasmus-plus.ec.europa.eu/",
+  },
+    {
+    id: "Polish",
+    image: "/images/nawa_poland.png",
+    name: "Polish National Agency for Academic Exchange.",
+    url: "https://nawa.gov.pl/en/nawa",
+  },
+
 ];
 
 export function Footer() {
@@ -133,7 +158,7 @@ export function Footer() {
               {t("contactInfo.address")}
             </h3>
             <p className="text-base text-gray-300 leading-relaxed">
-              Warsaw, Poland
+              Płock, Poland
             </p>
           </div>
         </div>

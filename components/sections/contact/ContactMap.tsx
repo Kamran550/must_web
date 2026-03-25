@@ -6,9 +6,7 @@ import { useTranslations } from "next-intl";
 
 const mapEmbedUrl =
   "https://www.google.com/maps?q=Aleja+Józefa+Piłsudskiego+35,+09-407+Płock,+Poland";
-const googleMapsUrl =
-  "https://www.google.com/maps/place/Ogrodowa+58,00-876+Warsaw,Poland";
-
+  const googleMapsUrl = "https://www.google.com/maps/place/Aleja+J%C3%B3zefa+Pi%C5%82sudskiego+35,+09-407+P%C5%82ock,+Poland";
 
 export default function ContactMap() {
   const t = useTranslations("contact.map");

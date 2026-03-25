@@ -59,7 +59,7 @@ export function UniversityJsonLd() {
     url: "https://must.edu.pl",
     logo: "https://must.edu.pl/images/MUST-logo.png",
     description:
-      "Mazovia University of Science and Technology (MUST) offers bachelor's, master's and PhD programs in Warsaw, Poland. Excellence in science, technology and innovation since 2020.",
+      "Mazovia University of Science and Technology (MUST) offers bachelor's, master's and PhD programs in Płock, Poland. Excellence in science, technology and innovation since 2020.",
     address: {
       "@type": "PostalAddress",
       addressCountry: "Poland",
@@ -105,7 +105,7 @@ export function WebsiteJsonLd() {
     url: "https://must.edu.pl",
     name: "Mazovia University of Science and Technology",
     alternateName: ["MUST", "Mazovia University of Science and Technology"],
-    description: "Official website of Mazovia University of Science and Technology (MUST) - Warsaw, Poland",
+    description: "Official website of Mazovia University of Science and Technology (MUST) - Płock, Poland",
     publisher: {
       "@id": "https://must.edu.pl/#organization",
     },
