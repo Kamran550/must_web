@@ -125,7 +125,7 @@ export default function AdministrativeUnitsPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition-colors hover:border-cyan-400/35 hover:bg-white/10">
+                    {/* <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition-colors hover:border-cyan-400/35 hover:bg-white/10">
                       <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-400/15">
                         <Phone className="h-5 w-5 text-cyan-300" />
                       </div>
@@ -137,7 +137,7 @@ export default function AdministrativeUnitsPage() {
                           +48 22 579 10 00
                         </p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
