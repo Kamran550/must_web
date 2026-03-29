@@ -132,12 +132,6 @@ export function Footer() {
               >
                 +48579277493
               </a>
-              <a
-                href="tel:+48579369968"
-                className="block text-base text-gray-300 hover:text-[#d4af37] transition-colors duration-200"
-              >
-                +48 579 369 968
-              </a>
             </div>
           </div>
 

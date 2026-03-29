@@ -5,8 +5,8 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const contactInfo = {
-  phone: { primary: " +90 5386796595", hours: "Mon-Fri: 9:00 AM - 6:00 PM" },
-  email: { primary: "info@must.edu", admissions: "international@must.edu", support: "rectorate@must.edu" },
+  phone: { primary: "+48 579277493", hours: "Mon-Fri: 9:00 AM - 6:00 PM" },
+  email: { primary: "info@must.edu.pl", admissions: "international@must.edu.pl", support: "rectorate@must.edu.pl" },
   address: { street: "Aleja Józefa Piłsudskiego 35", city: "09-407 Płock", country: "Poland" },
 };
 
