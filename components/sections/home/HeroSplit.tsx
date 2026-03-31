@@ -52,7 +52,7 @@ export default function HeroSplit() {
             size="lg"
             className="rounded-md bg-[#722F37] hover:bg-[#5a252c] text-white font-semibold px-8"
           >
-            <Link href="/apply" className="inline-flex items-center gap-2">
+            <Link href="#" className="inline-flex items-center gap-2">
               {t("primaryButton")}
               <ArrowRight className="w-4 h-4" />
             </Link>

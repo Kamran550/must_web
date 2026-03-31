@@ -99,7 +99,7 @@ export default function HeroSection() {
             size="lg"
             className="group bg-linear-to-r from-[#722F37] to-[#5a252c] hover:from-[#5a252c] hover:to-[#722F37] text-white text-lg px-10 py-7 rounded-full shadow-2xl hover:shadow-[#722F37]/50 transition-all border-0 font-bold"
           >
-            <Link href="/apply" className="flex items-center gap-3">
+            <Link href="#" className="flex items-center gap-3">
               {t("primaryButton")}
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </Link>

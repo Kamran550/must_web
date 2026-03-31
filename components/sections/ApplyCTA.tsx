@@ -73,7 +73,7 @@ export default function ApplyCTA() {
                   size="lg"
                   className="bg-white hover:bg-white/95 text-[#722F37] font-semibold rounded-xl gap-2"
                 >
-                  <Link href="/apply">
+                  <Link href="#">
                     {t("button")}
                     <ArrowRight className="w-4 h-4" />
                   </Link>

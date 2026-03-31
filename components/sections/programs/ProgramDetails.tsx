@@ -217,7 +217,7 @@ export default function ProgramDetails({ program }: ProgramDetailsProps) {
                   size="lg"
                   className="w-full bg-primary hover:bg-primary/90"
                 >
-                  <Link href="/apply">{t("applyNow")}</Link>
+                  <Link href="#">{t("applyNow")}</Link>
                 </Button>
                 <Button asChild variant="outline" className="w-full">
                   <Link href="/contact">{t("contactAdmissions")}</Link>

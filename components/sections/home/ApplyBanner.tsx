@@ -24,7 +24,7 @@ export default function ApplyBanner() {
           size="lg"
           className="bg-white text-[#722F37] hover:bg-white/95 font-semibold rounded-md px-8 shrink-0"
         >
-          <Link href="/apply" className="inline-flex items-center gap-2">
+          <Link href="#" className="inline-flex items-center gap-2">
             {t("button")}
             <ArrowRight className="w-4 h-4" />
           </Link>

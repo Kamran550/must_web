@@ -171,7 +171,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-6 text-sm text-gray-400">
             <Link
-              href="/apply"
+              href="#"
               className="hover:text-[#d4af37] transition-colors duration-200"
             >
               {t("links.apply")}

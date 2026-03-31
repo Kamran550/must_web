@@ -4,9 +4,13 @@ import { motion } from "framer-motion";
 import { MapPin, ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-const mapEmbedUrl =
-  "https://www.google.com/maps?q=Aleja+Józefa+Piłsudskiego+35,+09-407+Płock,+Poland";
-  const googleMapsUrl = "https://www.google.com/maps/place/Aleja+J%C3%B3zefa+Pi%C5%82sudskiego+35,+09-407+P%C5%82ock,+Poland";
+const locationQuery = "Aleja Józefa Piłsudskiego 35, 09-407 Płock, Poland";
+const mapEmbedUrl = `https://maps.google.com/maps?hl=en&q=${encodeURIComponent(
+  locationQuery
+)}&t=&z=16&ie=UTF8&iwloc=B&output=embed`;
+const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  locationQuery
+)}`;
 
 export default function ContactMap() {
   const t = useTranslations("contact.map");
@@ -30,7 +34,7 @@ export default function ContactMap() {
           title="MUST Location Map"
           className="absolute inset-0 w-full h-full"
         />
-        <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4 md:p-6">
+        <div className="absolute bottom-0 left-0 right-0 z-10 bg-linear-to-t from-black/60 via-black/30 to-transparent p-4 md:p-6">
           <div className="max-w-4xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="flex items-center gap-3">
               <MapPin className="w-6 h-6 text-[#d4af37] shrink-0" />

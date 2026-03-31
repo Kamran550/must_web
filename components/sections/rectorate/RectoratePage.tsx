@@ -13,11 +13,12 @@ export default function RectoratePage() {
   );
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-slate-950 font-sans pt-24 pb-20">
+    <main className="relative min-h-screen overflow-hidden bg-[#040712] font-sans pt-24 pb-20">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 left-1/2 h-136 w-136 -translate-x-1/2 rounded-full bg-cyan-500/15 blur-[130px]" />
-        <div className="absolute right-0 top-1/3 h-104 w-104 rounded-full bg-indigo-500/10 blur-[110px]" />
-        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-violet-500/10 blur-[110px]" />
+        <div className="absolute -top-32 left-1/2 h-136 w-136 -translate-x-1/2 rounded-full bg-sky-500/20 blur-[140px]" />
+        <div className="absolute -right-32 top-[18%] h-96 w-96 rounded-full bg-fuchsia-500/15 blur-[130px]" />
+        <div className="absolute -bottom-24 -left-24 h-88 w-88 rounded-full bg-indigo-500/15 blur-[120px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.07)_1px,transparent_0)] bg-size-[28px_28px] opacity-15" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -25,18 +26,18 @@ export default function RectoratePage() {
           initial={{ opacity: 0, y: -18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="rounded-3xl border border-white/10 bg-white/3 p-6 shadow-2xl shadow-black/45 backdrop-blur-xl md:p-10"
+          className="rounded-4xl border border-white/15 bg-linear-to-br from-white/10 via-white/[0.07] to-transparent p-6 shadow-[0_35px_80px_-30px_rgba(8,145,178,0.45)] backdrop-blur-2xl md:p-10"
         >
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300/90">
+              <p className="mb-3 inline-flex rounded-full border border-sky-300/35 bg-sky-400/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-200">
                 Leadership
               </p>
-              <h1 className="text-3xl font-extrabold tracking-tight text-white md:text-5xl">
+              <h1 className="bg-linear-to-r from-white via-slate-100 to-sky-200 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent md:text-5xl">
                 {t("title")}
               </h1>
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-200">
+            <div className="inline-flex items-center gap-2 rounded-full border border-violet-300/30 bg-violet-400/15 px-4 py-2 text-sm font-medium text-violet-100">
               <Award className="h-4 w-4" />
               <span>{t("tabs.profile")}</span>
             </div>
@@ -47,14 +48,14 @@ export default function RectoratePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-8 inline-flex rounded-2xl border border-white/10 bg-white/5 p-1 backdrop-blur"
+          className="mt-8 inline-flex rounded-2xl border border-white/15 bg-slate-900/60 p-1.5 shadow-[0_10px_35px_-18px_rgba(56,189,248,0.55)] backdrop-blur-xl"
         >
           <button
             onClick={() => setActiveTab("profile")}
             className={`relative rounded-xl px-5 py-3 text-sm font-semibold transition-all md:text-base ${
               activeTab === "profile"
-                ? "bg-cyan-400/20 text-cyan-200 shadow-lg shadow-cyan-500/15"
-                : "text-slate-300 hover:bg-white/5 hover:text-white"
+                ? "bg-linear-to-r from-sky-500/25 to-indigo-500/25 text-sky-100 shadow-lg shadow-sky-900/40"
+                : "text-slate-300 hover:bg-white/10 hover:text-white"
             }`}
           >
             <span className="flex items-center gap-2">
@@ -64,7 +65,7 @@ export default function RectoratePage() {
             {activeTab === "profile" && (
               <motion.div
                 layoutId="activeTab"
-                className="absolute inset-0 -z-10 rounded-xl border border-cyan-300/30"
+                className="absolute inset-0 -z-10 rounded-xl border border-sky-300/40"
                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
               />
             )}
@@ -73,8 +74,8 @@ export default function RectoratePage() {
             onClick={() => setActiveTab("welcomeMessage")}
             className={`relative rounded-xl px-5 py-3 text-sm font-semibold transition-all md:text-base ${
               activeTab === "welcomeMessage"
-                ? "bg-cyan-400/20 text-cyan-200 shadow-lg shadow-cyan-500/15"
-                : "text-slate-300 hover:bg-white/5 hover:text-white"
+                ? "bg-linear-to-r from-sky-500/25 to-indigo-500/25 text-sky-100 shadow-lg shadow-sky-900/40"
+                : "text-slate-300 hover:bg-white/10 hover:text-white"
             }`}
           >
             <span className="flex items-center gap-2">
@@ -84,7 +85,7 @@ export default function RectoratePage() {
             {activeTab === "welcomeMessage" && (
               <motion.div
                 layoutId="activeTab"
-                className="absolute inset-0 -z-10 rounded-xl border border-cyan-300/30"
+                className="absolute inset-0 -z-10 rounded-xl border border-sky-300/40"
                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
               />
             )}
@@ -103,7 +104,7 @@ export default function RectoratePage() {
                 className="grid gap-8 lg:grid-cols-5"
               >
                 <div className="lg:col-span-2">
-                  <div className="sticky top-28 rounded-3xl border border-white/10 bg-white/5 p-3 shadow-xl shadow-black/30 backdrop-blur-xl">
+                  <div className="sticky top-28 rounded-3xl border border-white/15 bg-linear-to-b from-white/10 to-white/5 p-3 shadow-[0_22px_60px_-30px_rgba(125,211,252,0.65)] backdrop-blur-2xl">
                     <div className="relative aspect-3/4 overflow-hidden rounded-2xl">
                       <Image
                         src="/images/rector.jpeg"
@@ -112,7 +113,7 @@ export default function RectoratePage() {
                         className="object-cover"
                         priority
                       />
-                      <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/15 to-transparent" />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/25 to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
                         <div className="mb-2 flex items-center gap-2">
                           <Award className="h-5 w-5 text-amber-300" />
@@ -129,11 +130,11 @@ export default function RectoratePage() {
                 </div>
 
                 <div className="space-y-6 lg:col-span-3">
-                  <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/25 backdrop-blur-xl md:p-8">
+                  <div className="rounded-3xl border border-white/15 bg-slate-900/45 p-6 shadow-[0_24px_65px_-32px_rgba(59,130,246,0.7)] backdrop-blur-2xl md:p-8">
                     <div className="space-y-4">
-                      <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-slate-900/40 p-4">
-                        <div className="rounded-xl bg-cyan-400/20 p-3">
-                          <Globe className="h-6 w-6 text-cyan-300" />
+                      <div className="flex items-start gap-4 rounded-2xl border border-white/15 bg-linear-to-r from-slate-900/70 to-slate-800/45 p-4">
+                        <div className="rounded-xl bg-sky-400/20 p-3 ring-1 ring-sky-200/25">
+                          <Globe className="h-6 w-6 text-sky-300" />
                         </div>
                         <div>
                           <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-slate-400">
@@ -145,9 +146,9 @@ export default function RectoratePage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-slate-900/40 p-4">
-                        <div className="rounded-xl bg-cyan-400/20 p-3">
-                          <Mail className="h-6 w-6 text-cyan-300" />
+                      <div className="flex items-start gap-4 rounded-2xl border border-white/15 bg-linear-to-r from-slate-900/70 to-slate-800/45 p-4">
+                        <div className="rounded-xl bg-sky-400/20 p-3 ring-1 ring-sky-200/25">
+                          <Mail className="h-6 w-6 text-sky-300" />
                         </div>
                         <div>
                           <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-slate-400">
@@ -155,7 +156,7 @@ export default function RectoratePage() {
                           </p>
                           <a
                             href={`mailto:${t("profile.emailValue")}`}
-                            className="text-base font-semibold text-cyan-300 hover:underline md:text-lg"
+                            className="text-base font-semibold text-sky-300 hover:text-sky-200 hover:underline md:text-lg"
                           >
                             {t("profile.emailValue")}
                           </a>
@@ -164,9 +165,9 @@ export default function RectoratePage() {
                     </div>
                   </div>
 
-                  <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/25 backdrop-blur-xl md:p-8">
+                  <div className="rounded-3xl border border-white/15 bg-slate-900/45 p-6 shadow-[0_24px_65px_-32px_rgba(14,165,233,0.65)] backdrop-blur-2xl md:p-8">
                     <div className="mb-4 flex items-center gap-3">
-                      <BookOpen className="h-6 w-6 text-cyan-300" />
+                      <BookOpen className="h-6 w-6 text-sky-300" />
                       <h3 className="text-2xl font-bold text-white">Biography</h3>
                     </div>
                     <div className="space-y-4 leading-relaxed text-slate-300">
@@ -185,10 +186,10 @@ export default function RectoratePage() {
                 transition={{ duration: 0.35 }}
                 className="max-w-5xl"
               >
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl md:p-10">
+                <div className="rounded-3xl border border-white/15 bg-linear-to-br from-slate-900/60 via-slate-900/45 to-slate-800/40 p-6 shadow-[0_30px_80px_-34px_rgba(99,102,241,0.75)] backdrop-blur-2xl md:p-10">
                   <div className="mb-6 flex items-center gap-3">
-                    <div className="rounded-2xl bg-cyan-400/15 p-3">
-                      <Quote className="h-8 w-8 text-cyan-300" />
+                    <div className="rounded-2xl bg-sky-400/15 p-3 ring-1 ring-sky-300/25">
+                      <Quote className="h-8 w-8 text-sky-300" />
                     </div>
                     <h2 className="text-2xl font-bold text-white md:text-3xl">
                       {t("welcomeMessage.title")}
@@ -216,7 +217,7 @@ export default function RectoratePage() {
                         <p className="text-2xl font-bold text-white">
                           {t("welcomeMessage.signatureName")}
                         </p>
-                        <p className="mt-1 text-base font-semibold text-cyan-300">
+                        <p className="mt-1 text-base font-semibold text-sky-300">
                           {t("welcomeMessage.signatureTitle")}
                         </p>
                       </div>

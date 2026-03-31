@@ -276,7 +276,7 @@ function ProgramCard({ program, index }: { program: Program; index: number }) {
               asChild
               className="bg-[#722F37] hover:bg-[#5a252c] text-white shadow-lg"
             >
-              <Link href="/apply">{t("apply")}</Link>
+              <Link href="#">{t("apply")}</Link>
             </Button>
           </div>
         </CardContent>

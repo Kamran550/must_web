@@ -164,7 +164,7 @@ export default function Scholarships() {
                       {t("applicationDeadline")}: <strong className="text-gray-700">{deadline}</strong>
                     </div>
                     <Button asChild size="sm" className="bg-[#722F37] hover:bg-[#5a252c] rounded-lg gap-1">
-                      <Link href="/apply">
+                      <Link href="#">
                         {t("apply")}
                         <ArrowRight className="w-4 h-4" />
                       </Link>
