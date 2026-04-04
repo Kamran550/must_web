@@ -1,9 +1,8 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Mail, Phone, Building2, Briefcase } from "lucide-react";
+import { Mail, Building2, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function AdministrativeUnitsPage() {
@@ -12,32 +11,28 @@ export default function AdministrativeUnitsPage() {
   const staff = [
     {
       id: "vice-rector",
-      image: "/images/vice-rector.jpeg",
       positionKey: "viceRector.position",
       nameKey: "viceRector.name",
       emailKey: "viceRector.email",
     },
     {
       id: "rector-advisor",
-      image: "/images/chancellor.jpeg",
       positionKey: "rectorAdvisor.position",
       nameKey: "rectorAdvisor.name",
       emailKey: "rectorAdvisor.email",
     },
     {
       id: "secretary-general",
-      image: "/images/secretary-general.jpeg",
       positionKey: "secretaryGeneral.position",
       nameKey: "secretaryGeneral.name",
       emailKey: "secretaryGeneral.email",
     },
     {
       id: "office-director",
-      image: "/images/office-director.jpeg",
       positionKey: "officeDirector.position",
       nameKey: "officeDirector.name",
       emailKey: "officeDirector.email",
-    }
+    },
   ];
 
   return (
@@ -80,20 +75,7 @@ export default function AdministrativeUnitsPage() {
             >
               <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-cyan-400 via-blue-500 to-cyan-400 opacity-70" />
 
-              <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
-                <div className="relative mx-auto h-40 w-40 shrink-0 sm:mx-0">
-                  <div className="absolute -inset-2 rounded-3xl bg-cyan-400/20 blur-lg transition-all duration-500 group-hover:bg-cyan-400/30" />
-                  <div className="relative h-full w-full overflow-hidden rounded-3xl ring-1 ring-white/15">
-                    <Image
-                      src={member.image}
-                      alt={t(member.nameKey)}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      priority={index === 0}
-                    />
-                  </div>
-                </div>
-
+              <div className="flex flex-col gap-6">
                 <div className="flex min-w-0 flex-1 flex-col">
                   <div className="mb-4">
                     <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-400/10 px-3 py-1.5">

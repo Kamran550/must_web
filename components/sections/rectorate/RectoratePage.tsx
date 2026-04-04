@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Mail, Award, GraduationCap, Globe, BookOpen, Quote } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -101,35 +100,21 @@ export default function RectoratePage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.35 }}
-                className="grid gap-8 lg:grid-cols-5"
+                className="space-y-6"
               >
-                <div className="lg:col-span-2">
-                  <div className="sticky top-28 rounded-3xl border border-white/15 bg-linear-to-b from-white/10 to-white/5 p-3 shadow-[0_22px_60px_-30px_rgba(125,211,252,0.65)] backdrop-blur-2xl">
-                    <div className="relative aspect-3/4 overflow-hidden rounded-2xl">
-                      <Image
-                        src="/images/rector.jpeg"
-                        alt={t("profile.fullNameValue")}
-                        fill
-                        className="object-cover"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/25 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                        <div className="mb-2 flex items-center gap-2">
-                          <Award className="h-5 w-5 text-amber-300" />
-                          <span className="text-xs font-bold uppercase tracking-widest text-amber-100">
-                            Rector
-                          </span>
-                        </div>
-                        <h2 className="text-2xl font-bold">
-                          {t("profile.fullNameValue")}
-                        </h2>
-                      </div>
-                    </div>
+                <div className="rounded-3xl border border-white/15 bg-linear-to-b from-white/10 to-white/5 p-6 shadow-[0_22px_60px_-30px_rgba(125,211,252,0.65)] backdrop-blur-2xl md:p-8">
+                  <div className="mb-2 flex items-center gap-2">
+                    <Award className="h-5 w-5 text-amber-300" />
+                    <span className="text-xs font-bold uppercase tracking-widest text-amber-100">
+                      Rector
+                    </span>
                   </div>
+                  <h2 className="text-2xl font-bold text-white md:text-3xl">
+                    {t("profile.fullNameValue")}
+                  </h2>
                 </div>
 
-                <div className="space-y-6 lg:col-span-3">
+                <div className="space-y-6">
                   <div className="rounded-3xl border border-white/15 bg-slate-900/45 p-6 shadow-[0_24px_65px_-32px_rgba(59,130,246,0.7)] backdrop-blur-2xl md:p-8">
                     <div className="space-y-4">
                       <div className="flex items-start gap-4 rounded-2xl border border-white/15 bg-linear-to-r from-slate-900/70 to-slate-800/45 p-4">
